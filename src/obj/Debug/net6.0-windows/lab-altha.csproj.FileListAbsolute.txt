@@ -17,3 +17,22 @@ C:\Users\dhani\source\repos\lab-altha\obj\Debug\net6.0-windows\lab-altha.pdb
 C:\Users\dhani\source\repos\lab-altha\obj\Debug\net6.0-windows\lab-altha.genruntimeconfig.cache
 C:\Users\dhani\source\repos\lab-altha\obj\Debug\net6.0-windows\ref\lab-altha.dll
 C:\Users\dhani\source\repos\lab-altha\obj\Debug\net6.0-windows\lab_altha.Properties.Resources.resources
+D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\src\bin\Debug\net6.0-windows\lab-altha.exe
+D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\src\bin\Debug\net6.0-windows\lab-altha.deps.json
+D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\src\bin\Debug\net6.0-windows\lab-altha.runtimeconfig.json
+D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\src\bin\Debug\net6.0-windows\lab-altha.dll
+D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\src\bin\Debug\net6.0-windows\lab-altha.pdb
+D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\src\obj\Debug\net6.0-windows\lab-altha.csproj.AssemblyReference.cache
+D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\src\obj\Debug\net6.0-windows\lab_altha.Form1.resources
+D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\src\obj\Debug\net6.0-windows\lab_altha.menu.resources
+D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\src\obj\Debug\net6.0-windows\lab_altha.Properties.Resources.resources
+D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\src\obj\Debug\net6.0-windows\lab-altha.csproj.GenerateResource.cache
+D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\src\obj\Debug\net6.0-windows\lab-altha.GeneratedMSBuildEditorConfig.editorconfig
+D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\src\obj\Debug\net6.0-windows\lab-altha.AssemblyInfoInputs.cache
+D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\src\obj\Debug\net6.0-windows\lab-altha.AssemblyInfo.cs
+D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\src\obj\Debug\net6.0-windows\lab-altha.csproj.CoreCompileInputs.cache
+D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\src\obj\Debug\net6.0-windows\lab-altha.dll
+D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\src\obj\Debug\net6.0-windows\refint\lab-altha.dll
+D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\src\obj\Debug\net6.0-windows\lab-altha.pdb
+D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\src\obj\Debug\net6.0-windows\lab-altha.genruntimeconfig.cache
+D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\src\obj\Debug\net6.0-windows\ref\lab-altha.dll

@@ -25,22 +25,23 @@ namespace lab_altha
             string fileName = textBox1.Text;
             string textFile = dirFix + @"\tc\" + fileName;
             //label2.Text = textFile;
+            
 
             if (File.Exists(textFile))
             {
                 label1.Text = "File Found";
                 fileAuthenticated = true;
+                InputFile.fileName = textBox1.Text;
+                
+
+                
             }
             else
             {
-                label2.Text = "File Not Found";
+                label1.Text = "File Not Found";
                 fileAuthenticated = false;
+                
             }
-
-
-
-
-
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -58,14 +59,15 @@ namespace lab_altha
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonVisualize_Click(object sender, EventArgs e)
         {
             if (fileAuthenticated)
             {
-                //this.Hide();
-                menu menuform = new menu();
+                this.Hide();
+                var menuform = new menu();
+                menuform.FormClosed += (s, args) => this.Close();
                 menuform.Show();
-                //this.Close();
+                
             }
             else
             {

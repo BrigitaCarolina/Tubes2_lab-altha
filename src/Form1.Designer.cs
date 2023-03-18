@@ -35,7 +35,7 @@
             readFile = new Label();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
-            button2 = new Button();
+            buttonVisualize = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -120,19 +120,19 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.DarkOliveGreen;
-            button2.BackgroundImageLayout = ImageLayout.None;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.ForeColor = Color.Bisque;
-            button2.Location = new Point(601, 581);
-            button2.Name = "button2";
-            button2.Size = new Size(140, 40);
-            button2.TabIndex = 8;
-            button2.Text = "Visualize";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            buttonVisualize.BackColor = Color.DarkOliveGreen;
+            buttonVisualize.BackgroundImageLayout = ImageLayout.None;
+            buttonVisualize.FlatAppearance.BorderSize = 0;
+            buttonVisualize.FlatStyle = FlatStyle.Flat;
+            buttonVisualize.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonVisualize.ForeColor = Color.Bisque;
+            buttonVisualize.Location = new Point(601, 581);
+            buttonVisualize.Name = "button2";
+            buttonVisualize.Size = new Size(140, 40);
+            buttonVisualize.TabIndex = 8;
+            buttonVisualize.Text = "Visualize";
+            buttonVisualize.UseVisualStyleBackColor = false;
+            buttonVisualize.Click += buttonVisualize_Click;
             // 
             // Form1
             // 
@@ -141,7 +141,7 @@
             BackColor = Color.White;
             BackgroundImage = Properties.Resources.MENU;
             ClientSize = new Size(1200, 700);
-            Controls.Add(button2);
+            Controls.Add(buttonVisualize);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(label2);
@@ -167,6 +167,6 @@
         private Label readFile;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
-        private Button button2;
+        private Button buttonVisualize;
     }
 }

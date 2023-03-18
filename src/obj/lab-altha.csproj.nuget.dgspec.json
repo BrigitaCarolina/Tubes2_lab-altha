@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dhani\\source\\repos\\lab-altha\\lab-altha.csproj": {}
+    "D:\\00_STEI ITB\\04_SMT4\\STRATEGI ALGORITMA\\TUBES2\\src\\lab-altha.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dhani\\source\\repos\\lab-altha\\lab-altha.csproj": {
+    "D:\\00_STEI ITB\\04_SMT4\\STRATEGI ALGORITMA\\TUBES2\\src\\lab-altha.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dhani\\source\\repos\\lab-altha\\lab-altha.csproj",
+        "projectUniqueName": "D:\\00_STEI ITB\\04_SMT4\\STRATEGI ALGORITMA\\TUBES2\\src\\lab-altha.csproj",
         "projectName": "lab-altha",
-        "projectPath": "C:\\Users\\dhani\\source\\repos\\lab-altha\\lab-altha.csproj",
+        "projectPath": "D:\\00_STEI ITB\\04_SMT4\\STRATEGI ALGORITMA\\TUBES2\\src\\lab-altha.csproj",
         "packagesPath": "C:\\Users\\dhani\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dhani\\source\\repos\\lab-altha\\obj\\",
+        "outputPath": "D:\\00_STEI ITB\\04_SMT4\\STRATEGI ALGORITMA\\TUBES2\\src\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dhani\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -42,5 +42,13 @@ namespace lab_altha
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var mainmenu = new Form1();
+            mainmenu.FormClosed += (s, args) => this.Close();
+            mainmenu.Show();
+        }
     }
 }

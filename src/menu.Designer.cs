@@ -1,4 +1,8 @@
-﻿namespace lab_altha
+﻿using static System.Net.Mime.MediaTypeNames;
+using System.Windows.Forms;
+using System.Xml.Linq;
+
+namespace lab_altha
 {
     partial class menu
     {
@@ -37,6 +41,7 @@
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -144,6 +149,7 @@
             button2.TabIndex = 10;
             button2.Text = "Back";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // pictureBox2
             // 
@@ -178,6 +184,14 @@
             pictureBox4.TabIndex = 13;
             pictureBox4.TabStop = false;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(81, 152);
+            label3.Name = "label3";
+            label3.Size = new Size(0, 15);
+            label3.TabIndex = 14;
+            // 
             // menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -185,6 +199,7 @@
             BackColor = SystemColors.ButtonHighlight;
             BackgroundImage = Properties.Resources.MENU;
             ClientSize = new Size(1200, 700);
+            Controls.Add(label3);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
@@ -217,5 +232,6 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
+        private Label label3;
     }
 }
