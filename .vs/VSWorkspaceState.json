@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src"
   ],
-  "SelectedNode": "\\lab-altha.sln",
+  "SelectedNode": "\\src\\bfs.cs",
   "PreviewInSolutionExplorer": false
 }

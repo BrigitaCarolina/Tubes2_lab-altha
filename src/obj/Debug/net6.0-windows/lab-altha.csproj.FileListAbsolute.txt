@@ -36,3 +36,22 @@ D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\src\obj\Debug\net6.0-windows\re
 D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\src\obj\Debug\net6.0-windows\lab-altha.pdb
 D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\src\obj\Debug\net6.0-windows\lab-altha.genruntimeconfig.cache
 D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\src\obj\Debug\net6.0-windows\ref\lab-altha.dll
+C:\Users\gitac\Desktop\GIts\STIMA\TUBES#2STIMA\Tubes2_lab-altha\src\bin\Debug\net6.0-windows\lab-altha.exe
+C:\Users\gitac\Desktop\GIts\STIMA\TUBES#2STIMA\Tubes2_lab-altha\src\bin\Debug\net6.0-windows\lab-altha.deps.json
+C:\Users\gitac\Desktop\GIts\STIMA\TUBES#2STIMA\Tubes2_lab-altha\src\bin\Debug\net6.0-windows\lab-altha.runtimeconfig.json
+C:\Users\gitac\Desktop\GIts\STIMA\TUBES#2STIMA\Tubes2_lab-altha\src\bin\Debug\net6.0-windows\lab-altha.dll
+C:\Users\gitac\Desktop\GIts\STIMA\TUBES#2STIMA\Tubes2_lab-altha\src\bin\Debug\net6.0-windows\lab-altha.pdb
+C:\Users\gitac\Desktop\GIts\STIMA\TUBES#2STIMA\Tubes2_lab-altha\src\obj\Debug\net6.0-windows\lab-altha.csproj.AssemblyReference.cache
+C:\Users\gitac\Desktop\GIts\STIMA\TUBES#2STIMA\Tubes2_lab-altha\src\obj\Debug\net6.0-windows\lab_altha.Form1.resources
+C:\Users\gitac\Desktop\GIts\STIMA\TUBES#2STIMA\Tubes2_lab-altha\src\obj\Debug\net6.0-windows\lab_altha.menu.resources
+C:\Users\gitac\Desktop\GIts\STIMA\TUBES#2STIMA\Tubes2_lab-altha\src\obj\Debug\net6.0-windows\lab_altha.Properties.Resources.resources
+C:\Users\gitac\Desktop\GIts\STIMA\TUBES#2STIMA\Tubes2_lab-altha\src\obj\Debug\net6.0-windows\lab-altha.csproj.GenerateResource.cache
+C:\Users\gitac\Desktop\GIts\STIMA\TUBES#2STIMA\Tubes2_lab-altha\src\obj\Debug\net6.0-windows\lab-altha.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gitac\Desktop\GIts\STIMA\TUBES#2STIMA\Tubes2_lab-altha\src\obj\Debug\net6.0-windows\lab-altha.AssemblyInfoInputs.cache
+C:\Users\gitac\Desktop\GIts\STIMA\TUBES#2STIMA\Tubes2_lab-altha\src\obj\Debug\net6.0-windows\lab-altha.AssemblyInfo.cs
+C:\Users\gitac\Desktop\GIts\STIMA\TUBES#2STIMA\Tubes2_lab-altha\src\obj\Debug\net6.0-windows\lab-altha.csproj.CoreCompileInputs.cache
+C:\Users\gitac\Desktop\GIts\STIMA\TUBES#2STIMA\Tubes2_lab-altha\src\obj\Debug\net6.0-windows\lab-altha.dll
+C:\Users\gitac\Desktop\GIts\STIMA\TUBES#2STIMA\Tubes2_lab-altha\src\obj\Debug\net6.0-windows\refint\lab-altha.dll
+C:\Users\gitac\Desktop\GIts\STIMA\TUBES#2STIMA\Tubes2_lab-altha\src\obj\Debug\net6.0-windows\lab-altha.pdb
+C:\Users\gitac\Desktop\GIts\STIMA\TUBES#2STIMA\Tubes2_lab-altha\src\obj\Debug\net6.0-windows\lab-altha.genruntimeconfig.cache
+C:\Users\gitac\Desktop\GIts\STIMA\TUBES#2STIMA\Tubes2_lab-altha\src\obj\Debug\net6.0-windows\ref\lab-altha.dll
