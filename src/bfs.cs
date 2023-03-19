@@ -168,6 +168,7 @@ namespace lab_altha
                     }
                     s.Stop();
                     long seconds = s.ElapsedMilliseconds;
+                    steps = allPath.Count - 1;
                     return new bfs(allPath, IndexToChar(allPath), steps, nodesCount, seconds);
                 }
                 //Console.WriteLine("Count: " + count);
