@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "D:\\00_STEI ITB\\04_SMT4\\STRATEGI ALGORITMA\\TUBES2\\src\\lab-altha.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dhani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\Users\\gitac\\Desktop\\GIts\\STIMA\\TUBES#2STIMA\\Tubes2_lab-altha\\src\\lab-altha.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\gitac\\Desktop\\GIts\\STIMA\\TUBES#2STIMA\\Tubes2_lab-altha\\src\\lab-altha.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gitac\\Desktop\\GIts\\STIMA\\TUBES#2STIMA\\Tubes2_lab-altha\\src\\lab-altha.csproj",
+        "projectName": "lab-altha",
+        "projectPath": "C:\\Users\\gitac\\Desktop\\GIts\\STIMA\\TUBES#2STIMA\\Tubes2_lab-altha\\src\\lab-altha.csproj",
+        "packagesPath": "C:\\Users\\gitac\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gitac\\Desktop\\GIts\\STIMA\\TUBES#2STIMA\\Tubes2_lab-altha\\src\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\gitac\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 7e347db98975b23fef144653ea2e063844f4f7f2
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

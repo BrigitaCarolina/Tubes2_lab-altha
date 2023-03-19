@@ -31,6 +31,7 @@ namespace lab_altha
             bfsNodes = nodes;
             bfsSeconds = second;
         } 
+
         // BFS Algorithm
         public static bfs BFS(char[,] map)
         {
@@ -50,7 +51,6 @@ namespace lab_altha
                     }
                 }
             }
-            //Console.WriteLine("count T: " + countT);
             // Defining direction
             Tuple<int, int>[] directions =
             {
@@ -86,7 +86,6 @@ namespace lab_altha
                 if (map[current.Item1, current.Item2] == 'T' && count < countT - 1)
                 {
                     count++;
-                    //Console.Write("Count: " + count);
                     List<Tuple<int, int>> path = new List<Tuple<int, int>>();
                     pathqueue.Clear();
                     tempCurrent = current;
@@ -101,7 +100,6 @@ namespace lab_altha
                     }
                     else
                     {
-                        //Console.WriteLine("GETIING HERE");
                         while (current != tempCurrent2)
                         {
                             path.Add(current);
@@ -109,39 +107,19 @@ namespace lab_altha
                             current = pathParent[current];
                         }
                         tempPathParent[current] = pathParent[current];
-                        //Console.WriteLine("Solution 2");
-                        //foreach (Tuple<int, int> solution2 in path)
-                        //{
-                        //    Console.WriteLine(solution2.Item1 + " " + solution2.Item2); 
-                        //}
                     }
                     path.Reverse();
                     foreach (Tuple<int, int> solution in path)
                     {
                         allPath.Add(solution);
                     }
-                    //Console.WriteLine("All path after 1 T: "); 
-                    //foreach (Tuple<int, int> element2 in allPath)
-                    //{
-                    //    //Console.Write(element2.Item1 + "," + element2.Item2 + " - ");
-                    //}
-                    //Console.WriteLine();
                     current = tempCurrent;
                     tempCurrent2 = current;
-                    //Console.WriteLine("current after 1 T: " + current.Item1 + "," + current.Item2);
-                    foreach (Tuple<int, int> element in pathqueue)
-                    {
-                        //Console.WriteLine("PathQueue After 1 " + element.Item1 + ", " + element.Item2);
-                    }
-                    //Console.WriteLine("TempCurrent after 1 T: " + tempCurrent.Item1 + "," + tempCurrent.Item2);
                     pathParent.Clear();
                     pathParent = new Dictionary<Tuple<int, int>, Tuple<int, int>>(tempPathParent);
                 }
                 else if (map[current.Item1, current.Item2] == 'T' && count == countT - 1)
                 {
-                    //Console.WriteLine("Get Here");
-                    //Console.WriteLine("Current: " + current.Item1 + "," + current.Item2);
-                    //Console.WriteLine("TempCurrent: " + tempCurrent.Item1 + "," + tempCurrent.Item2);
                     List<Tuple<int, int>> path = new List<Tuple<int, int>>();
                     // Construct current path to treasure
                     if (count == 0)
@@ -168,10 +146,9 @@ namespace lab_altha
                     }
                     s.Stop();
                     long seconds = s.ElapsedMilliseconds;
+                    steps = allPath.Count - 1;
                     return new bfs(allPath, IndexToChar(allPath), steps, nodesCount, seconds);
                 }
-                //Console.WriteLine("Count: " + count);
-                //Console.WriteLine(current.Item1 + "," + current.Item2);
 
                 // Explore neighbours of the current point
                 foreach (Tuple<int, int> direction in directions)
@@ -184,22 +161,41 @@ namespace lab_altha
                     if (isPointValid(map, neighbor) && !pathParent.ContainsKey(neighbor))
                     {
                         nodesCount++;
-                        //Console.WriteLine("Neighbor: " + neighbor.Item1 + "," + neighbor.Item2);
-                        //Console.WriteLine("Neighbor: ");
-                        //Console.WriteLine(neighbor.Item1 + "," + neighbor.Item2);
+                        pathqueue.Enqueue(neighbor);
+                        pathParent[neighbor] = current;
+                    } else if (isPointValid(map, neighbor) && current != start && current == tempCurrent) {
+                        nodesCount++;
                         pathqueue.Enqueue(neighbor);
                         pathParent[neighbor] = current;
                     }
                 }
-
-                //Console.WriteLine("After neighbor loop");
-                //Console.WriteLine(current.Item1 + "," + current.Item2);
             }
             s.Stop();
             long second = s.ElapsedMilliseconds;
             return new bfs(allPath, IndexToChar(allPath), steps, nodesCount, second);
         }
 
+        public static bfs TSPWithBFS(char[,] map, Tuple<int, int> lastTreasure) {
+            int maxRow = map.GetLength(0);
+            int maxCol = map.GetLength(1);
+            for (int i = 0; i < maxRow; i++)
+            {
+                for (int j = 0; j < maxCol; j++)
+                {
+                    if (map[i, j] == 'T')
+                    {
+                        map[i, j] = 'R';
+                    }
+                    if (map[i, j] == 'K')
+                    {
+                        map[i, j] = 'T';
+                    }
+
+                }
+            }
+            map[lastTreasure.Item1, lastTreasure.Item2] = 'K';
+            return bfs.BFS(map);
+        }
 
         static bool isPointValid(char[,] map, Tuple<int, int> point)
         {
