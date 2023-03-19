@@ -16,33 +16,40 @@ namespace lab_altha
             Console.WriteLine("tes");
             // MAIN
             Console.WriteLine("This is Treasure Hunt Solver with BFS!");
-            int rows = 4;
-            int cols = 4;
+            // int rows = 4;
+            // int cols = 4;
 
             // creating matrix of characters
-            char[,] matrix = new char[rows, cols];
+            // char[,] matrix = new char[rows, cols];
 
             // assigning characters to matrix 
-            matrix[0, 0] = 'K';
-            matrix[0, 1] = 'R';
-            matrix[0, 2] = 'R';
-            matrix[0, 3] = 'R';
-            matrix[1, 0] = 'X';
-            matrix[1, 1] = 'R';
-            matrix[1, 2] = 'X';
-            matrix[1, 3] = 'T';
-            matrix[2, 0] = 'X';
-            matrix[2, 1] = 'T';
-            matrix[2, 2] = 'R';
-            matrix[2, 3] = 'R';
-            matrix[3, 0] = 'X';
-            matrix[3, 1] = 'R';
-            matrix[3, 2] = 'X';
-            matrix[3, 3] = 'X';
+            // matrix[0, 0] = 'K';
+            // matrix[0, 1] = 'R';
+            // matrix[0, 2] = 'R';
+            // matrix[0, 3] = 'R';
+            // matrix[1, 0] = 'X';
+            // matrix[1, 1] = 'R';
+            // matrix[1, 2] = 'X';
+            // matrix[1, 3] = 'T';
+            // matrix[2, 0] = 'X';
+            // matrix[2, 1] = 'T';
+            // matrix[2, 2] = 'R';
+            // matrix[2, 3] = 'R';
+            // matrix[3, 0] = 'X';
+            // matrix[3, 1] = 'R';
+            // matrix[3, 2] = 'X';
+            // matrix[3, 3] = 'X';
 
-            for (int i = 0; i < rows; i++)
+            char[,] matrix = {{'K', 'R', 'R', 'T', 'R', 'R'},
+                              {'X', 'X', 'R', 'X', 'R', 'X'},
+                              {'R', 'R', 'R', 'X', 'X', 'T'},
+                              {'x', 'X', 'R', 'R', 'R', 'R'},
+                              {'X', 'R', 'X', 'X', 'X', 'R'},
+                              {'T', 'R', 'R', 'R', 'R', 'R'}};
+
+            for (int i = 0; i < matrix.GetLength(0); i++)
             {
-                for (int j = 0; j < cols; j++)
+                for (int j = 0; j < matrix.GetLength(1); j++)
                 {
                     Console.Write(matrix[i, j] + " ");
                 }

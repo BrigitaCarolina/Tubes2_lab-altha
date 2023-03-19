@@ -31,6 +31,7 @@ namespace lab_altha
             bfsNodes = nodes;
             bfsSeconds = second;
         } 
+
         // BFS Algorithm
         public static bfs BFS(char[,] map)
         {
@@ -50,7 +51,7 @@ namespace lab_altha
                     }
                 }
             }
-            //Console.WriteLine("count T: " + countT);
+            Console.WriteLine("count T: " + countT);
             // Defining direction
             Tuple<int, int>[] directions =
             {
@@ -86,7 +87,7 @@ namespace lab_altha
                 if (map[current.Item1, current.Item2] == 'T' && count < countT - 1)
                 {
                     count++;
-                    //Console.Write("Count: " + count);
+                    Console.Write("Count: " + count);
                     List<Tuple<int, int>> path = new List<Tuple<int, int>>();
                     pathqueue.Clear();
                     tempCurrent = current;
@@ -139,6 +140,7 @@ namespace lab_altha
                 }
                 else if (map[current.Item1, current.Item2] == 'T' && count == countT - 1)
                 {
+                    Console.WriteLine("Count: " + count);
                     //Console.WriteLine("Get Here");
                     //Console.WriteLine("Current: " + current.Item1 + "," + current.Item2);
                     //Console.WriteLine("TempCurrent: " + tempCurrent.Item1 + "," + tempCurrent.Item2);
@@ -171,7 +173,6 @@ namespace lab_altha
                     steps = allPath.Count - 1;
                     return new bfs(allPath, IndexToChar(allPath), steps, nodesCount, seconds);
                 }
-                //Console.WriteLine("Count: " + count);
                 //Console.WriteLine(current.Item1 + "," + current.Item2);
 
                 // Explore neighbours of the current point
@@ -185,9 +186,13 @@ namespace lab_altha
                     if (isPointValid(map, neighbor) && !pathParent.ContainsKey(neighbor))
                     {
                         nodesCount++;
-                        //Console.WriteLine("Neighbor: " + neighbor.Item1 + "," + neighbor.Item2);
+                        // Console.WriteLine("Neighbor: " + neighbor.Item1 + "," + neighbor.Item2);
                         //Console.WriteLine("Neighbor: ");
                         //Console.WriteLine(neighbor.Item1 + "," + neighbor.Item2);
+                        pathqueue.Enqueue(neighbor);
+                        pathParent[neighbor] = current;
+                    } else if (isPointValid(map, neighbor) && current != start && current == tempCurrent) {
+                        nodesCount++;
                         pathqueue.Enqueue(neighbor);
                         pathParent[neighbor] = current;
                     }
@@ -196,6 +201,7 @@ namespace lab_altha
                 //Console.WriteLine("After neighbor loop");
                 //Console.WriteLine(current.Item1 + "," + current.Item2);
             }
+            // Console.WriteLine("Keluar loop");
             s.Stop();
             long second = s.ElapsedMilliseconds;
             return new bfs(allPath, IndexToChar(allPath), steps, nodesCount, second);
