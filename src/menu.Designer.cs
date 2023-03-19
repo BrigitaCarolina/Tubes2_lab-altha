@@ -34,14 +34,15 @@ namespace lab_altha
             pictureBox1 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
             button1 = new Button();
             button2 = new Button();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
             label3 = new Label();
+            checkBox1 = new CheckBox();
+            checkBox2 = new CheckBox();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -72,7 +73,6 @@ namespace lab_altha
             label1.Size = new Size(110, 23);
             label1.TabIndex = 1;
             label1.Text = "File Name: ";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -87,38 +87,6 @@ namespace lab_altha
             label2.TabIndex = 2;
             label2.Text = "Algorithm";
             // 
-            // radioButton1
-            // 
-            radioButton1.AutoSize = true;
-            radioButton1.BackColor = Color.Transparent;
-            radioButton1.BackgroundImage = Properties.Resources.bg;
-            radioButton1.BackgroundImageLayout = ImageLayout.None;
-            radioButton1.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton1.ForeColor = Color.Sienna;
-            radioButton1.Location = new Point(81, 249);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(56, 23);
-            radioButton1.TabIndex = 3;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "BFS";
-            radioButton1.UseVisualStyleBackColor = false;
-            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
-            // 
-            // radioButton2
-            // 
-            radioButton2.AutoSize = true;
-            radioButton2.BackColor = Color.Transparent;
-            radioButton2.BackgroundImage = Properties.Resources.bg;
-            radioButton2.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton2.ForeColor = Color.Sienna;
-            radioButton2.Location = new Point(163, 249);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(58, 23);
-            radioButton2.TabIndex = 4;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "DFS";
-            radioButton2.UseVisualStyleBackColor = false;
-            // 
             // button1
             // 
             button1.BackColor = Color.SaddleBrown;
@@ -132,8 +100,9 @@ namespace lab_altha
             button1.Name = "button1";
             button1.Size = new Size(140, 30);
             button1.TabIndex = 5;
-            button1.Text = "Visualize";
+            button1.Text = "Start";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -187,10 +156,51 @@ namespace lab_altha
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(81, 152);
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Inter", 11.249999F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = Color.SaddleBrown;
+            label3.Image = Properties.Resources.bg;
+            label3.Location = new Point(80, 160);
             label3.Name = "label3";
-            label3.Size = new Size(0, 15);
+            label3.Size = new Size(0, 19);
             label3.TabIndex = 14;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.BackColor = Color.OrangeRed;
+            checkBox1.BackgroundImage = Properties.Resources.bg;
+            checkBox1.FlatAppearance.CheckedBackColor = Color.Sienna;
+            checkBox1.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBox1.ForeColor = Color.Sienna;
+            checkBox1.Location = new Point(72, 249);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(57, 23);
+            checkBox1.TabIndex = 15;
+            checkBox1.Text = "BFS";
+            checkBox1.UseVisualStyleBackColor = false;
+            // 
+            // checkBox2
+            // 
+            checkBox2.AutoSize = true;
+            checkBox2.BackgroundImage = Properties.Resources.bg;
+            checkBox2.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBox2.ForeColor = Color.Sienna;
+            checkBox2.Location = new Point(150, 249);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(59, 23);
+            checkBox2.TabIndex = 16;
+            checkBox2.Text = "DFS";
+            checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(454, 283);
+            label4.Name = "label4";
+            label4.Size = new Size(38, 15);
+            label4.TabIndex = 17;
+            label4.Text = InputFile.readFile(label3.Text);
             // 
             // menu
             // 
@@ -199,14 +209,15 @@ namespace lab_altha
             BackColor = SystemColors.ButtonHighlight;
             BackgroundImage = Properties.Resources.MENU;
             ClientSize = new Size(1200, 700);
+            Controls.Add(label4);
+            Controls.Add(checkBox2);
+            Controls.Add(checkBox1);
             Controls.Add(label3);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(radioButton2);
-            Controls.Add(radioButton1);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
@@ -225,13 +236,14 @@ namespace lab_altha
         private PictureBox pictureBox1;
         private Label label1;
         private Label label2;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
         private Button button1;
         private Button button2;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
         private Label label3;
+        private CheckBox checkBox1;
+        private CheckBox checkBox2;
+        private Label label4;
     }
 }

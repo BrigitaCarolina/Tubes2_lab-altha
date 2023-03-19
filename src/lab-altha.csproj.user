@@ -4,9 +4,6 @@
     <Compile Update="bfs.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Update="dfs.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

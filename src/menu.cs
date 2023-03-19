@@ -19,28 +19,23 @@ namespace lab_altha
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (checkBox1.Checked && checkBox2.Checked)
+            {
+                MessageBox.Show("You can't select both algorithm at the same time");
 
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
+            }
+            else if (checkBox1.Checked && !checkBox2.Checked)
+            {
+                //BFS
+            }
+            else if (!checkBox1.Checked && checkBox2.Checked)
+            {
+                //DFS
+            }
+            else if (!checkBox1.Checked && !checkBox2.Checked)
+            {
+                MessageBox.Show("You haven't choose the algorithm");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
