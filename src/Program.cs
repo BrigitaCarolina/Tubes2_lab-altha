@@ -16,29 +16,6 @@ namespace lab_altha
             Console.WriteLine("tes");
             // MAIN
             Console.WriteLine("This is Treasure Hunt Solver with BFS!");
-            // int rows = 4;
-            // int cols = 4;
-
-            // creating matrix of characters
-            // char[,] matrix = new char[rows, cols];
-
-            // assigning characters to matrix 
-            // matrix[0, 0] = 'K';
-            // matrix[0, 1] = 'R';
-            // matrix[0, 2] = 'R';
-            // matrix[0, 3] = 'R';
-            // matrix[1, 0] = 'X';
-            // matrix[1, 1] = 'R';
-            // matrix[1, 2] = 'X';
-            // matrix[1, 3] = 'T';
-            // matrix[2, 0] = 'X';
-            // matrix[2, 1] = 'T';
-            // matrix[2, 2] = 'R';
-            // matrix[2, 3] = 'R';
-            // matrix[3, 0] = 'X';
-            // matrix[3, 1] = 'R';
-            // matrix[3, 2] = 'X';
-            // matrix[3, 3] = 'X';
 
             char[,] matrix = {{'K', 'R', 'R', 'T', 'R', 'R'},
                               {'X', 'X', 'R', 'X', 'R', 'X'},
@@ -58,6 +35,10 @@ namespace lab_altha
 
             bfs Answer = bfs.BFS(matrix);
             (List<Tuple<int, int>> solutions, List<char> solutionsInChar, int steps, int nodes, long seconds) = (Answer.bfsPath, Answer.bfsDirection, Answer.bfsSteps, Answer.bfsNodes, Answer.bfsSeconds);
+
+            bfs Answer2 = bfs.TSPWithBFS(matrix, solutions[solutions.Count-1]);
+            (List<Tuple<int, int>> solutions2, List<char> solutionsInChar2, int steps2, int nodes2, long seconds2) = (Answer2.bfsPath, Answer2.bfsDirection, Answer2.bfsSteps, Answer2.bfsNodes, Answer2.bfsSeconds);
+ 
 
             if (solutions != null)
             {
@@ -89,6 +70,54 @@ namespace lab_altha
             {
                 Console.WriteLine("Solutions null!");
             }
+
+            Console.WriteLine();
+
+            Console.WriteLine("This is TSP with BFS!");
+            if (solutions2 != null)
+            {
+                for (int i = 0; i < solutions.Count; i++)
+                {
+                    Console.Write(solutions[i].Item1 + "," + solutions[i].Item2 + " - ");
+
+                }
+                for (int i = 0; i < solutions2.Count; i++)
+                {
+                    Console.Write(solutions2[i].Item1 + "," + solutions2[i].Item2);
+                    if (i != solutions2.Count - 1)
+                    {
+                        Console.Write(" - ");
+                    }
+                }
+                Console.WriteLine();
+                for (int i = 0; i < solutionsInChar.Count; i++)
+                {
+                    Console.Write(solutionsInChar[i] + " - ");
+                }
+                for (int i = 0; i < solutionsInChar2.Count; i++)
+                {
+                    Console.Write(solutionsInChar2[i]);
+                    if (i != solutionsInChar2.Count - 1)
+                    {
+                        Console.Write(" - ");
+                    }
+                }
+                Console.WriteLine();
+                int stepsMerge = steps + steps2;
+                Console.WriteLine("Steps: " + stepsMerge);
+                int nodesMerge = nodes + nodes2;
+                Console.WriteLine("Nodes: " + nodesMerge);
+                long secondsMerge = seconds + seconds2;
+                Console.WriteLine("Execution Time: " + secondsMerge);
+
+            }
+
+            if (solutions2 == null)
+            {
+                Console.WriteLine("Solutions null!");
+            }
+
+            Console.WriteLine();
             
 
             Console.WriteLine();
