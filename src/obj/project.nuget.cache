@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "k4/Hrs9ednD2FaNjLS/rtXU62dxEIFoRaAn5Sc3u3cfbFcuwU8PTolpmtEkBhYh9Bq0vszF9kQkuHncdMOTfrQ==",
+  "dgSpecHash": "lB9O1Bs+MuaOtiW404MoreJchrJwlKmVJbUotwsoLvjUtj+OQ5ohgrmStoESMvSEr70lFF8RUSKnGT3LBj7ttg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gitac\\Desktop\\GIts\\STIMA\\TUBES#2STIMA\\Tubes2_lab-altha\\src\\lab-altha.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\altha\\Kuliah\\Semester4\\stima_code\\tubes2\\Tubes2_lab-altha\\src\\lab-altha.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\altha\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.15\\microsoft.netcore.app.ref.6.0.15.nupkg.sha512",
+    "C:\\Users\\altha\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.15\\microsoft.windowsdesktop.app.ref.6.0.15.nupkg.sha512",
+    "C:\\Users\\altha\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.15\\microsoft.aspnetcore.app.ref.6.0.15.nupkg.sha512",
+    "C:\\Users\\altha\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.15\\microsoft.netcore.app.host.win-x64.6.0.15.nupkg.sha512"
+  ],
   "logs": []
 }

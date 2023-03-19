@@ -8,10 +8,12 @@ namespace lab_altha
         [STAThread]
         static void Main()
         {
+            /*
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Console.WriteLine("tes");
+            //ApplicationConfiguration.Initialize();
+            //Application.Run(new Form1());
             Console.WriteLine("tes");
             // MAIN
             Console.WriteLine("This is Treasure Hunt Solver with BFS!");
@@ -81,8 +83,37 @@ namespace lab_altha
             {
                 Console.WriteLine("Solutions null!");
             }
+            */
 
             Console.WriteLine();
+
+            Console.WriteLine("BFSS");
+            char[,] map = { {'X','X','T','X','X','T'},
+                             {'X','X','R','X','X','R'},
+                             {'K','R','R','R','R','R'},
+                             {'X','R','X','X','R','X'},
+                             {'X','T','X','X','R','X' } };
+            dfs result = dfs.DFS(map);
+            Console.WriteLine("DFS Solution: ");
+            dfs.PrintPoints(result.dfsPath);
+            Console.WriteLine();
+            Console.WriteLine("direction: ");
+            foreach (var item in result.dfsDirection)
+            {
+                Console.Write(item + ", ");
+            }
+            Console.WriteLine();
+            Console.WriteLine("Steps: " + result.dfsSteps);
+            Console.WriteLine("Nodes: " + result.dfsNodes);
+            Console.WriteLine("Execution time: " + result.dfsSeconds + " ms");
+
+            dfs tsp = dfs.TSPwithDFS(map, result.dfsPath[result.dfsPath.Count()-1]);
+            Console.WriteLine("TSP : ");
+            foreach(var item in tsp.dfsPath)
+            {
+                Console.WriteLine(item);
+            }
+
         }
     }
 }
