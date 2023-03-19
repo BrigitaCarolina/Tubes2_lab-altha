@@ -8,19 +8,24 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\dhani\\.nuget\\packages\\": {}
+    "C:\\Users\\altha\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\00_STEI ITB\\04_SMT4\\STRATEGI ALGORITMA\\TUBES2\\src\\lab-altha.csproj",
+      "projectUniqueName": "D:\\altha\\Kuliah\\Semester4\\stima_code\\tubes2\\Tubes2_lab-altha\\src\\lab-altha.csproj",
       "projectName": "lab-altha",
-      "projectPath": "D:\\00_STEI ITB\\04_SMT4\\STRATEGI ALGORITMA\\TUBES2\\src\\lab-altha.csproj",
-      "packagesPath": "C:\\Users\\dhani\\.nuget\\packages\\",
-      "outputPath": "D:\\00_STEI ITB\\04_SMT4\\STRATEGI ALGORITMA\\TUBES2\\src\\obj\\",
+      "projectPath": "D:\\altha\\Kuliah\\Semester4\\stima_code\\tubes2\\Tubes2_lab-altha\\src\\lab-altha.csproj",
+      "packagesPath": "C:\\Users\\altha\\.nuget\\packages\\",
+      "outputPath": "D:\\altha\\Kuliah\\Semester4\\stima_code\\tubes2\\Tubes2_lab-altha\\src\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\dhani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\altha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -56,6 +61,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.15, 6.0.15]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.15, 6.0.15]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.15, 6.0.15]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.15, 6.0.15]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -64,7 +87,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
