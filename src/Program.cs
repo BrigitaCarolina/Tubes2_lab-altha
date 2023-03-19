@@ -11,8 +11,8 @@ namespace lab_altha
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             Console.WriteLine("tes");
-            //ApplicationConfiguration.Initialize();
-            //Application.Run(new Form1());
+            ApplicationConfiguration.Initialize();
+            Application.Run(new Form1());
             Console.WriteLine("tes");
             // MAIN
             Console.WriteLine("This is Treasure Hunt Solver with BFS!");

@@ -46,8 +46,8 @@
             button1.BackgroundImageLayout = ImageLayout.None;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Montserrat", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = Color.Transparent;
+            button1.Font = new Font("Perpetua Titling MT", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.SeaShell;
             button1.Location = new Point(762, 469);
             button1.Name = "button1";
             button1.Size = new Size(150, 40);
@@ -118,19 +118,19 @@
             pictureBox2.TabStop = false;
             pictureBox2.Click += pictureBox2_Click;
             // 
-            // button2
+            // buttonVisualize
             // 
             buttonVisualize.BackColor = Color.DarkOliveGreen;
             buttonVisualize.BackgroundImageLayout = ImageLayout.None;
             buttonVisualize.FlatAppearance.BorderSize = 0;
             buttonVisualize.FlatStyle = FlatStyle.Flat;
-            buttonVisualize.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonVisualize.ForeColor = Color.Bisque;
+            buttonVisualize.Font = new Font("Perpetua Titling MT", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonVisualize.ForeColor = Color.SeaShell;
             buttonVisualize.Location = new Point(601, 581);
-            buttonVisualize.Name = "button2";
+            buttonVisualize.Name = "buttonVisualize";
             buttonVisualize.Size = new Size(140, 40);
             buttonVisualize.TabIndex = 8;
-            buttonVisualize.Text = "Visualize";
+            buttonVisualize.Text = "NEXT";
             buttonVisualize.UseVisualStyleBackColor = false;
             buttonVisualize.Click += buttonVisualize_Click;
             // 
