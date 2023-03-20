@@ -65,12 +65,20 @@ namespace lab_altha
                     }
 
 
+                    int foundK = 0;
+                    int foundT = 0;
                     int found = 0;
                     foreach (string line in readMat)
                     {
-                        if (line == "R" || line == "X" || line == "T" || line == "K")
+                        if (line == "R" || line == "X")
                         {
                             found++;
+                        } else if (line == "K")
+                        {
+                            foundK++;
+                        } else if(line == "T")
+                        {
+                            foundT++;
                         }
                     }
 
@@ -82,10 +90,22 @@ namespace lab_altha
                         proceed = false;
 
                     }
-                    else if (found != row * col)
+                    else if (found + foundK + foundT != row * col)
                     {
                         proceed = false;
                         MessageBox.Show("Please correct your formating to only K, R, X, T", "Warning");
+                    } else if (foundK == 0)
+                    {
+                        proceed = false;
+                        MessageBox.Show("There is no starting point in your file format", "Warning");
+                    } else if (foundK > 1)
+                    {
+                        proceed = false;
+                        MessageBox.Show("There is more than one starting point in your file format", "Warning");
+                    } else if (foundT == 0)
+                    {
+                        proceed = false;
+                        MessageBox.Show("There is no treasure in your file format", "Warning");
                     }
                     else
                     {
@@ -124,21 +144,24 @@ namespace lab_altha
 
         private void buttonVisualize_Click(object sender, EventArgs e)
         {
-            if (fileAuthenticated && proceed)
+            if (fileAuthenticated)
             {
-                this.Hide();
-                var menuform = new menu();
-                menuform.FormClosed += (s, args) => this.Close();
-                menuform.Show();
+                if (proceed)
+                {
+                    this.Hide();
+                    var menuform = new menu();
+                    menuform.FormClosed += (s, args) => this.Close();
+                    menuform.Show();
+                } else
+                {
+                    MessageBox.Show("File format is still wrong. Cannot proceed");
+                }
             }
             else if (!fileAuthenticated)
             {
                 MessageBox.Show("File is still not found. Cannot proceed");
             }
-            else if (fileAuthenticated && !proceed)
-            {
-                MessageBox.Show("File format is still wrong!");
-            }
+
 
         }
     }

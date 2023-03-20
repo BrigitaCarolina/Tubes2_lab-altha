@@ -14,7 +14,7 @@ namespace lab_altha
     class InputFile {
         public static string fileName = "";
         //public static List<char> setFirst;
-        public static string[] result;
+        //public static string[] result;
         //public static char[,] fixMatrix;
 
         public static string fileInputName { get { return fileName; } set { fileName = value; } }

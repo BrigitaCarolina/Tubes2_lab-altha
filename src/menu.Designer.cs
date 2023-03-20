@@ -32,6 +32,7 @@ namespace lab_altha
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             pictureBox1 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
@@ -223,7 +224,7 @@ namespace lab_altha
             label5.Font = new Font("Perpetua Titling MT", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.Sienna;
             label5.Image = Properties.Resources.bg;
-            label5.Location = new Point(62, 409);
+            label5.Location = new Point(485, 532);
             label5.Name = "label5";
             label5.Size = new Size(69, 20);
             label5.TabIndex = 18;
@@ -235,7 +236,7 @@ namespace lab_altha
             label6.Font = new Font("Perpetua Titling MT", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.Sienna;
             label6.Image = Properties.Resources.bg;
-            label6.Location = new Point(62, 478);
+            label6.Location = new Point(55, 415);
             label6.Name = "label6";
             label6.Size = new Size(67, 20);
             label6.TabIndex = 19;
@@ -247,7 +248,7 @@ namespace lab_altha
             label7.Font = new Font("Perpetua Titling MT", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = Color.Sienna;
             label7.Image = Properties.Resources.bg;
-            label7.Location = new Point(64, 532);
+            label7.Location = new Point(59, 483);
             label7.Name = "label7";
             label7.Size = new Size(55, 20);
             label7.TabIndex = 20;
@@ -259,7 +260,7 @@ namespace lab_altha
             label8.Font = new Font("Perpetua Titling MT", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label8.ForeColor = Color.Sienna;
             label8.Image = Properties.Resources.bg;
-            label8.Location = new Point(64, 604);
+            label8.Location = new Point(52, 555);
             label8.Name = "label8";
             label8.Size = new Size(157, 20);
             label8.TabIndex = 21;
@@ -272,7 +273,7 @@ namespace lab_altha
             label9.Font = new Font("Perpetua Titling MT", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             label9.ForeColor = Color.Sienna;
             label9.Image = Properties.Resources.bg;
-            label9.Location = new Point(68, 435);
+            label9.Location = new Point(491, 555);
             label9.Name = "label9";
             label9.Size = new Size(0, 15);
             label9.TabIndex = 22;
@@ -281,37 +282,40 @@ namespace lab_altha
             // 
             label10.AutoSize = true;
             label10.BackColor = Color.Transparent;
-            label10.Font = new Font("Perpetua Titling MT", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.Font = new Font("Perpetua Titling MT", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             label10.ForeColor = Color.Sienna;
             label10.Image = Properties.Resources.bg;
-            label10.Location = new Point(68, 503);
+            label10.Location = new Point(67, 447);
             label10.Name = "label10";
-            label10.Size = new Size(0, 15);
+            label10.Size = new Size(33, 17);
             label10.TabIndex = 23;
+            
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.BackColor = Color.Transparent;
-            label11.Font = new Font("Perpetua Titling MT", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label11.Font = new Font("Perpetua Titling MT", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             label11.ForeColor = Color.Sienna;
             label11.Image = Properties.Resources.bg;
-            label11.Location = new Point(69, 559);
+            label11.Location = new Point(67, 516);
             label11.Name = "label11";
-            label11.Size = new Size(0, 15);
+            label11.Size = new Size(33, 17);
             label11.TabIndex = 24;
+            
             // 
             // label12
             // 
             label12.AutoSize = true;
             label12.BackColor = Color.Transparent;
-            label12.Font = new Font("Perpetua Titling MT", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label12.Font = new Font("Perpetua Titling MT", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             label12.ForeColor = Color.Sienna;
             label12.Image = Properties.Resources.bg;
-            label12.Location = new Point(67, 633);
+            label12.Location = new Point(67, 585);
             label12.Name = "label12";
-            label12.Size = new Size(0, 15);
+            label12.Size = new Size(33, 17);
             label12.TabIndex = 25;
+            
             // 
             // dataGridView1
             // 
@@ -319,23 +323,39 @@ namespace lab_altha
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AllowUserToResizeColumns = false;
             dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = Color.Transparent;
-            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             dataGridView1.BackgroundColor = Color.SeaShell;
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridView1.ColumnHeadersHeight = 4;
             dataGridView1.ColumnHeadersVisible = false;
-            dataGridView1.Location = new Point(398, 119);
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Perpetua Titling MT", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.Sienna;
+            dataGridViewCellStyle1.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle1.SelectionForeColor = Color.Transparent;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridView1.Location = new Point(485, 130);
             dataGridView1.MultiSelect = false;
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Perpetua Titling MT", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Transparent;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(620, 525);
+            dataGridView1.RowTemplate.Height = 50;
+            dataGridView1.ScrollBars = ScrollBars.None;
+            dataGridView1.Size = new Size(450, 388);
             dataGridView1.TabIndex = 26;
+            dataGridView1.RowTemplate.Height = 500;
             // 
             // menu
             // 

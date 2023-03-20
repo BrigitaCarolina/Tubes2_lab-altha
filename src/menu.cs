@@ -40,26 +40,35 @@ namespace lab_altha
 
                 //Get Row
                 int row = temp.GetLength(0);
+                //Get col
                 int col = temp.GetLength(1);
 
                 dataGridView1.ColumnCount = col;
-                DataGridViewImageColumn img = new DataGridViewImageColumn();
-                dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
+                //DataGridViewImageColumn img = new DataGridViewImageColumn();
+
+
+                //dataGridView1.Rows[0].Selected = false;
+
                 for (int i = 0; i < row; i++)
                 {
                     DataGridViewRow rowN = new DataGridViewRow();
                     rowN.CreateCells(this.dataGridView1);
-                    //dataGridView1.Rows[0].Selected = false;
+                    rowN.Height = 1000;
+
                     for (int j = 0; j < col; j++)
                     {
                         //rowN.Cells[j].Value = temp[i, j];
                         if (temp[i, j] == 'X')
 
                         {
-                            //Bitmap img = new Bitmap(Properties.Resources.paper_baru);
+                            Bitmap img = new Bitmap(Properties.Resources.paper_baru);
+                           
+
                             //rowN.Cells[j].Value = img;
                             //Image image = Properties.Resources.bg;
                             //img.Image = image;
+                            rowN.Cells[j].Value =img;
 
 
 
@@ -67,18 +76,20 @@ namespace lab_altha
                         }
                         else if (temp[i, j] == 'R' || temp[i, j] == 'K')
                         {
+                            rowN.Cells[j].Value = "Jalan";
 
                         }
                         else if (temp[i, j] == 'T')
                         {
                             rowN.Cells[j].Value = "Treasure";
+
                         }
                     }
                     this.dataGridView1.Rows.Add(rowN);
                 }
-                for(int i = 0; i< row; i++)
+                for (int i = 0; i < row; i++)
                 {
-                    for(int j = 0; j < col; j++)
+                    for (int j = 0; j < col; j++)
                     {
                         DataGridViewRow rowN = new DataGridViewRow();
                         rowN.CreateCells(this.dataGridView1);
@@ -119,5 +130,7 @@ namespace lab_altha
             mainmenu.FormClosed += (s, args) => this.Close();
             mainmenu.Show();
         }
+
+
     }
 }
