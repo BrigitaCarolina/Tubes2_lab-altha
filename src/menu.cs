@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace lab_altha
 {
@@ -32,6 +33,17 @@ namespace lab_altha
                 {
                     //BFS without TSP
                     char[,] temp = InputFile.toMatrix(label4.Text);
+                    //Get Row
+                    int row = temp.GetLength(0);
+                    //Get col
+                    int col = temp.GetLength(1);
+                    dataGridView1.ColumnCount = col;
+                    dataGridView1.RowCount = row;
+                    dataGridView1.Rows[0].Selected = false;
+                    dataGridView1.GridColor = Color.Beige;
+
+
+
                     bfs Answer = bfs.BFS(temp);
                     (List<Tuple<int, int>> solutions, List<char> solutionsInChar, int steps, int nodes, long seconds) = (Answer.bfsPath, Answer.bfsDirection, Answer.bfsSteps, Answer.bfsNodes, Answer.bfsSeconds);
                     string result = string.Join("-", solutionsInChar);
@@ -40,20 +52,35 @@ namespace lab_altha
                     label11.Text = steps.ToString();
                     label12.Text = seconds.ToString() + " ms";
 
-                    //Get Row
-                    int row = temp.GetLength(0);
-                    //Get col
-                    int col = temp.GetLength(1);
+                    /*int countNull = 0;
+                    for (int i = 0; i < row; i++)
+                    {
+                        for(int j = 0; j < col; j++)
+                        {
+                            if (dataGridView1.Rows[i].Cells[0].Value.ToString() == null)
+                            {
+                                countNull++;
+                            }
+                        }
+                    }
+                    bool allNull = true;
+                    if(countNull == row * col)
+                    {
+                        allNull = true;
+                    } else
+                    {
+                        allNull = false;
+                    }
 
-                    dataGridView1.ColumnCount = col;
-                    dataGridView1.RowCount = row;
+                    if (allNull)
+                    {
+
+                    } else
+                    {
+                        dataGridView1.Rows.Clear();
+                    }*/
 
 
-
-                    dataGridView1.Rows[0].Selected = false;
-                    dataGridView1.GridColor = Color.Beige;
-
-                    //dataGridView1.Rows[0].Height = 500;
 
 
                     for (int i = 0; i < row; i++)
@@ -72,13 +99,15 @@ namespace lab_altha
                             if (temp[i, j] == 'X')
 
                             {
-                                Image image = Properties.Resources.bg;
-                                img.Image = image;
+                                //Image image = Properties.Resources.bg;
+                                //img.Image = image;
 
                                 //Bitmap img = new Bitmap(Properties.Resources.paper_baru);
 
 
                                 //rowN.Cells[j].Value = img;
+                                var codeBitmap = new Bitmap(Properties.Resources.bg);
+                                Image image = (Image)codeBitmap;
                                 dataGridView1.Rows[i].Cells[j].Value = "X";
 
 
@@ -100,19 +129,22 @@ namespace lab_altha
                         dataGridView1.Rows[i].Height = (400 / row);
 
                     }
-                    for (int i = 0; i < 7; i++)
+                    for (int k = 0; k < solutions.Count(); k++)
                     {
-                        int a = solutions[i].Item1;
-                        int b = solutions[i].Item2;
-                        for (int j = 0; j < col; j++)
+                        int a = solutions[k].Item1;
+                        int b = solutions[k].Item2;
+                        for(int i = 0; i < row; i++)
                         {
-
-                            if (a == i && b == j)
+                            for(int j = 0; j < col; j++)
                             {
-                                dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.DarkOliveGreen;
-                                //rowN.Cells[j].Style.BackColor = Color.SkyBlue;
+                                if (i == a && j == b)
+                                {
+                                    dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.DarkOliveGreen;
+                                    dataGridView1.Rows[i].Cells[j].Style.ForeColor = Color.White; 
+                                }
                             }
                         }
+                        
                     }
                 } else
                 {
