@@ -123,6 +123,26 @@ namespace lab_altha.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap buttonBrown {
+            get {
+                object obj = ResourceManager.GetObject("buttonBrown", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buttonBrown4 {
+            get {
+                object obj = ResourceManager.GetObject("buttonBrown4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Group_8 {
             get {
                 object obj = ResourceManager.GetObject("Group 8", resourceCulture);
@@ -196,6 +216,36 @@ namespace lab_altha.Properties {
         internal static System.Drawing.Bitmap paper_baru1 {
             get {
                 object obj = ResourceManager.GetObject("paper baru1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rectangle_2 {
+            get {
+                object obj = ResourceManager.GetObject("Rectangle 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rectangle_21 {
+            get {
+                object obj = ResourceManager.GetObject("Rectangle 21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap smallButton {
+            get {
+                object obj = ResourceManager.GetObject("smallButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

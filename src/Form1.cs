@@ -73,10 +73,12 @@ namespace lab_altha
                         if (line == "R" || line == "X")
                         {
                             found++;
-                        } else if (line == "K")
+                        }
+                        else if (line == "K")
                         {
                             foundK++;
-                        } else if(line == "T")
+                        }
+                        else if (line == "T")
                         {
                             foundT++;
                         }
@@ -94,15 +96,18 @@ namespace lab_altha
                     {
                         proceed = false;
                         MessageBox.Show("Please correct your formating to only K, R, X, T", "Warning");
-                    } else if (foundK == 0)
+                    }
+                    else if (foundK == 0)
                     {
                         proceed = false;
                         MessageBox.Show("There is no starting point in your file format", "Warning");
-                    } else if (foundK > 1)
+                    }
+                    else if (foundK > 1)
                     {
                         proceed = false;
                         MessageBox.Show("There is more than one starting point in your file format", "Warning");
-                    } else if (foundT == 0)
+                    }
+                    else if (foundT == 0)
                     {
                         proceed = false;
                         MessageBox.Show("There is no treasure in your file format", "Warning");
@@ -152,7 +157,8 @@ namespace lab_altha
                     var menuform = new menu();
                     menuform.FormClosed += (s, args) => this.Close();
                     menuform.Show();
-                } else
+                }
+                else
                 {
                     MessageBox.Show("File format is still wrong. Cannot proceed");
                 }

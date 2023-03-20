@@ -31,8 +31,8 @@ namespace lab_altha
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             pictureBox1 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
@@ -54,6 +54,7 @@ namespace lab_altha
             label11 = new Label();
             label12 = new Label();
             dataGridView1 = new DataGridView();
+            checkBox3 = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -80,7 +81,7 @@ namespace lab_altha
             label1.Font = new Font("Perpetua Titling MT", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.Sienna;
             label1.Image = Properties.Resources.paper;
-            label1.Location = new Point(72, 129);
+            label1.Location = new Point(72, 122);
             label1.Name = "label1";
             label1.Size = new Size(128, 23);
             label1.TabIndex = 1;
@@ -93,7 +94,7 @@ namespace lab_altha
             label2.Font = new Font("Perpetua Titling MT", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.Sienna;
             label2.Image = Properties.Resources.paper;
-            label2.Location = new Point(72, 205);
+            label2.Location = new Point(72, 190);
             label2.Name = "label2";
             label2.Size = new Size(137, 23);
             label2.TabIndex = 2;
@@ -101,16 +102,19 @@ namespace lab_altha
             // 
             // button1
             // 
-            button1.BackColor = Color.SaddleBrown;
+            button1.BackColor = Color.Transparent;
+            button1.BackgroundImage = Properties.Resources.bg;
             button1.BackgroundImageLayout = ImageLayout.None;
             button1.FlatAppearance.BorderColor = Color.White;
             button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.Gray;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Perpetua Titling MT", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.Bisque;
-            button1.Location = new Point(72, 305);
+            button1.Image = Properties.Resources.buttonBrown;
+            button1.Location = new Point(67, 296);
             button1.Name = "button1";
-            button1.Size = new Size(140, 30);
+            button1.Size = new Size(151, 49);
             button1.TabIndex = 5;
             button1.Text = "VISUALIZE";
             button1.UseVisualStyleBackColor = false;
@@ -118,15 +122,15 @@ namespace lab_altha
             // 
             // button2
             // 
-            button2.BackColor = Color.Sienna;
+            button2.BackColor = Color.Transparent;
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Perpetua Titling MT", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = Color.Bisque;
-            button2.ImageAlign = ContentAlignment.BottomLeft;
-            button2.Location = new Point(35, 35);
+            button2.Image = Properties.Resources.buttonBrown4;
+            button2.Location = new Point(35, 31);
             button2.Name = "button2";
-            button2.Size = new Size(90, 30);
+            button2.Size = new Size(90, 37);
             button2.TabIndex = 10;
             button2.Text = "Back";
             button2.UseVisualStyleBackColor = false;
@@ -185,7 +189,7 @@ namespace lab_altha
             checkBox1.FlatAppearance.CheckedBackColor = Color.Sienna;
             checkBox1.Font = new Font("Perpetua Titling MT", 12F, FontStyle.Regular, GraphicsUnit.Point);
             checkBox1.ForeColor = Color.Sienna;
-            checkBox1.Location = new Point(72, 249);
+            checkBox1.Location = new Point(72, 222);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(53, 23);
             checkBox1.TabIndex = 15;
@@ -198,7 +202,7 @@ namespace lab_altha
             checkBox2.BackgroundImage = Properties.Resources.bg;
             checkBox2.Font = new Font("Perpetua Titling MT", 12F, FontStyle.Regular, GraphicsUnit.Point);
             checkBox2.ForeColor = Color.Sienna;
-            checkBox2.Location = new Point(150, 249);
+            checkBox2.Location = new Point(150, 222);
             checkBox2.Name = "checkBox2";
             checkBox2.Size = new Size(56, 23);
             checkBox2.TabIndex = 16;
@@ -224,7 +228,7 @@ namespace lab_altha
             label5.Font = new Font("Perpetua Titling MT", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.Sienna;
             label5.Image = Properties.Resources.bg;
-            label5.Location = new Point(485, 532);
+            label5.Location = new Point(485, 536);
             label5.Name = "label5";
             label5.Size = new Size(69, 20);
             label5.TabIndex = 18;
@@ -287,9 +291,8 @@ namespace lab_altha
             label10.Image = Properties.Resources.bg;
             label10.Location = new Point(67, 447);
             label10.Name = "label10";
-            label10.Size = new Size(33, 17);
+            label10.Size = new Size(0, 17);
             label10.TabIndex = 23;
-            
             // 
             // label11
             // 
@@ -300,9 +303,8 @@ namespace lab_altha
             label11.Image = Properties.Resources.bg;
             label11.Location = new Point(67, 516);
             label11.Name = "label11";
-            label11.Size = new Size(33, 17);
+            label11.Size = new Size(0, 17);
             label11.TabIndex = 24;
-            
             // 
             // label12
             // 
@@ -313,9 +315,8 @@ namespace lab_altha
             label12.Image = Properties.Resources.bg;
             label12.Location = new Point(67, 585);
             label12.Name = "label12";
-            label12.Size = new Size(33, 17);
+            label12.Size = new Size(0, 17);
             label12.TabIndex = 25;
-            
             // 
             // dataGridView1
             // 
@@ -324,38 +325,49 @@ namespace lab_altha
             dataGridView1.AllowUserToResizeColumns = false;
             dataGridView1.AllowUserToResizeRows = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             dataGridView1.BackgroundColor = Color.SeaShell;
             dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridView1.ColumnHeadersHeight = 4;
             dataGridView1.ColumnHeadersVisible = false;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Window;
-            dataGridViewCellStyle1.Font = new Font("Perpetua Titling MT", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.Sienna;
-            dataGridViewCellStyle1.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle1.SelectionForeColor = Color.Transparent;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("Perpetua Titling MT", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.Sienna;
+            dataGridViewCellStyle3.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle3.SelectionForeColor = Color.Transparent;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.Location = new Point(485, 130);
             dataGridView1.MultiSelect = false;
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Perpetua Titling MT", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle2.SelectionForeColor = Color.Transparent;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Perpetua Titling MT", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle4.SelectionForeColor = Color.Transparent;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowTemplate.Height = 50;
+            dataGridView1.RowTemplate.Height = 250;
             dataGridView1.ScrollBars = ScrollBars.None;
-            dataGridView1.Size = new Size(450, 388);
+            dataGridView1.Size = new Size(450, 400);
             dataGridView1.TabIndex = 26;
-            dataGridView1.RowTemplate.Height = 500;
+            // 
+            // checkBox3
+            // 
+            checkBox3.AutoSize = true;
+            checkBox3.BackColor = Color.Transparent;
+            checkBox3.BackgroundImage = Properties.Resources.bg;
+            checkBox3.Font = new Font("Perpetua Titling MT", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBox3.ForeColor = Color.Sienna;
+            checkBox3.Location = new Point(73, 259);
+            checkBox3.Name = "checkBox3";
+            checkBox3.Size = new Size(88, 19);
+            checkBox3.TabIndex = 27;
+            checkBox3.Text = "With TSP";
+            checkBox3.UseVisualStyleBackColor = false;
             // 
             // menu
             // 
@@ -364,6 +376,7 @@ namespace lab_altha
             BackColor = SystemColors.ButtonHighlight;
             BackgroundImage = Properties.Resources.MENU;
             ClientSize = new Size(1200, 700);
+            Controls.Add(checkBox3);
             Controls.Add(dataGridView1);
             Controls.Add(label12);
             Controls.Add(label11);
@@ -419,5 +432,6 @@ namespace lab_altha
         private Label label11;
         private Label label12;
         private DataGridView dataGridView1;
+        private CheckBox checkBox3;
     }
 }

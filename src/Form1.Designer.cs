@@ -42,15 +42,17 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.DarkOliveGreen;
+            button1.BackColor = Color.Transparent;
             button1.BackgroundImageLayout = ImageLayout.None;
             button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.Olive;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Perpetua Titling MT", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.SeaShell;
-            button1.Location = new Point(762, 469);
+            button1.Image = Properties.Resources.Rectangle_2;
+            button1.Location = new Point(762, 465);
             button1.Name = "button1";
-            button1.Size = new Size(150, 40);
+            button1.Size = new Size(150, 41);
             button1.TabIndex = 0;
             button1.Text = "Search File";
             button1.UseVisualStyleBackColor = false;
@@ -120,15 +122,17 @@
             // 
             // buttonVisualize
             // 
-            buttonVisualize.BackColor = Color.DarkOliveGreen;
+            buttonVisualize.BackColor = Color.Transparent;
             buttonVisualize.BackgroundImageLayout = ImageLayout.None;
             buttonVisualize.FlatAppearance.BorderSize = 0;
+            buttonVisualize.FlatAppearance.MouseDownBackColor = Color.Olive;
             buttonVisualize.FlatStyle = FlatStyle.Flat;
             buttonVisualize.Font = new Font("Perpetua Titling MT", 12F, FontStyle.Bold, GraphicsUnit.Point);
             buttonVisualize.ForeColor = Color.SeaShell;
+            buttonVisualize.Image = Properties.Resources.Rectangle_2;
             buttonVisualize.Location = new Point(601, 581);
             buttonVisualize.Name = "buttonVisualize";
-            buttonVisualize.Size = new Size(140, 40);
+            buttonVisualize.Size = new Size(150, 41);
             buttonVisualize.TabIndex = 8;
             buttonVisualize.Text = "NEXT";
             buttonVisualize.UseVisualStyleBackColor = false;
