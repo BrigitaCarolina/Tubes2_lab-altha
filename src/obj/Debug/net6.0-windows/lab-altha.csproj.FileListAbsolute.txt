@@ -74,3 +74,8 @@ D:\altha\Kuliah\Semester4\stima_code\tubes2\Tubes2_lab-altha\src\obj\Debug\net6.
 D:\altha\Kuliah\Semester4\stima_code\tubes2\Tubes2_lab-altha\src\obj\Debug\net6.0-windows\lab-altha.pdb
 D:\altha\Kuliah\Semester4\stima_code\tubes2\Tubes2_lab-altha\src\obj\Debug\net6.0-windows\lab-altha.genruntimeconfig.cache
 D:\altha\Kuliah\Semester4\stima_code\tubes2\Tubes2_lab-altha\src\obj\Debug\net6.0-windows\ref\lab-altha.dll
+D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\bin\net6.0-windows\lab-altha.exe
+D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\bin\net6.0-windows\lab-altha.deps.json
+D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\bin\net6.0-windows\lab-altha.runtimeconfig.json
+D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\bin\net6.0-windows\lab-altha.dll
+D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\bin\net6.0-windows\lab-altha.pdb
