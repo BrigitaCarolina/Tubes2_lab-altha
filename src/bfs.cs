@@ -35,6 +35,8 @@ namespace lab_altha
         // BFS Algorithm
         public static bfs BFS(char[,] map)
         {
+            char[,] mapinsinde = new char[map.GetLength(0), map.GetLength(1)];
+            Array.Copy(map, mapinsinde, map.Length);
             int countT = 0;
             Tuple<int, int> start = Tuple.Create(0, 0);
             for (int i = 0; i < map.GetLength(0); i++)
@@ -83,10 +85,10 @@ namespace lab_altha
                 Tuple<int, int> current = pathqueue.Dequeue();
                 // Check if we've found the treasure 'T'
 
-                if (map[current.Item1, current.Item2] == 'T' && count < countT - 1)
+                if (mapinsinde[current.Item1, current.Item2] == 'T' && count < countT - 1)
                 {
                     count++;
-                    map[current.Item1, current.Item2] = 'R';
+                    mapinsinde[current.Item1, current.Item2] = 'R';
                     List<Tuple<int, int>> path = new List<Tuple<int, int>>();
                     pathqueue.Clear();
                     tempCurrent = current;
@@ -119,7 +121,7 @@ namespace lab_altha
                     pathParent.Clear();
                     pathParent = new Dictionary<Tuple<int, int>, Tuple<int, int>>();
                 }
-                else if (map[current.Item1, current.Item2] == 'T' && count == countT - 1)
+                else if (mapinsinde[current.Item1, current.Item2] == 'T' && count == countT - 1)
                 {
                     List<Tuple<int, int>> path = new List<Tuple<int, int>>();
                     // Construct current path to treasure
@@ -173,25 +175,46 @@ namespace lab_altha
         }
 
         public static bfs TSPWithBFS(char[,] map, Tuple<int, int> lastTreasure) {
+            bfs BFSAnswer = bfs.BFS(map);
             int maxRow = map.GetLength(0);
             int maxCol = map.GetLength(1);
+            char[,] mapinside = new char[maxRow, maxCol];
+            Array.Copy(map, mapinside, map.Length);
             for (int i = 0; i < maxRow; i++)
             {
                 for (int j = 0; j < maxCol; j++)
                 {
-                    if (map[i, j] == 'T')
+                    if (mapinside[i, j] == 'T')
                     {
-                        map[i, j] = 'R';
+                        mapinside[i, j] = 'R';
                     }
-                    if (map[i, j] == 'K')
+                    if (mapinside[i, j] == 'K')
                     {
-                        map[i, j] = 'T';
+                        mapinside[i, j] = 'T';
                     }
 
                 }
             }
-            map[lastTreasure.Item1, lastTreasure.Item2] = 'K';
-            return bfs.BFS(map);
+            mapinside[lastTreasure.Item1, lastTreasure.Item2] = 'K';
+            bfs TSP = bfs.BFS(mapinside);
+            List<Tuple<int, int>> solutions = new List<Tuple<int, int>>(); 
+            for (int i = 0; i < BFSAnswer.bfsPath.Count; i++) {
+                solutions.Add(BFSAnswer.bfsPath[i]);
+            }
+            for (int i = 1; i < TSP.bfsPath.Count; i++) {
+                solutions.Add(TSP.bfsPath[i]);
+            }
+            List<char> solutionsInChar = new List<char>();
+            for (int i = 0; i < BFSAnswer.bfsDirection.Count; i++) {
+                solutionsInChar.Add(BFSAnswer.bfsDirection[i]);
+            }
+            for (int i = 0; i < TSP.bfsDirection.Count; i++) {
+                solutionsInChar.Add(TSP.bfsDirection[i]);
+            }
+            int steps = BFSAnswer.bfsSteps + TSP.bfsSteps;
+            int nodes = BFSAnswer.bfsNodes + TSP.bfsNodes;
+            long seconds = BFSAnswer.bfsSeconds + TSP.bfsSeconds;
+            return new bfs(solutions, solutionsInChar, steps, nodes, seconds);
         }
 
         static bool isPointValid(char[,] map, Tuple<int, int> point)

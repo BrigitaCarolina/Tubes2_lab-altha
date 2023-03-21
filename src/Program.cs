@@ -76,11 +76,6 @@ namespace lab_altha
             Console.WriteLine("This is TSP with BFS!");
             if (solutions2 != null)
             {
-                for (int i = 0; i < solutions.Count; i++)
-                {
-                    Console.Write(solutions[i].Item1 + "," + solutions[i].Item2 + " - ");
-
-                }
                 for (int i = 0; i < solutions2.Count; i++)
                 {
                     Console.Write(solutions2[i].Item1 + "," + solutions2[i].Item2);
@@ -90,10 +85,6 @@ namespace lab_altha
                     }
                 }
                 Console.WriteLine();
-                for (int i = 0; i < solutionsInChar.Count; i++)
-                {
-                    Console.Write(solutionsInChar[i] + " - ");
-                }
                 for (int i = 0; i < solutionsInChar2.Count; i++)
                 {
                     Console.Write(solutionsInChar2[i]);
@@ -103,12 +94,9 @@ namespace lab_altha
                     }
                 }
                 Console.WriteLine();
-                int stepsMerge = steps + steps2;
-                Console.WriteLine("Steps: " + stepsMerge);
-                int nodesMerge = nodes + nodes2;
-                Console.WriteLine("Nodes: " + nodesMerge);
-                long secondsMerge = seconds + seconds2;
-                Console.WriteLine("Execution Time: " + secondsMerge);
+                Console.WriteLine("Steps: " + steps2);
+                Console.WriteLine("Nodes: " + nodes2);
+                Console.WriteLine("Execution Time: " + seconds2);
 
             }
 
