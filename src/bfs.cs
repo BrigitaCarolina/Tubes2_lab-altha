@@ -54,10 +54,10 @@ namespace lab_altha
             // Defining direction
             Tuple<int, int>[] directions =
             {
-                Tuple.Create(0, -1), // left
                 Tuple.Create(0, 1), // right
-                Tuple.Create(-1, 0), // up
-                Tuple.Create(1, 0) // down
+                Tuple.Create(1, 0), // down
+                Tuple.Create(0, -1), // left
+                Tuple.Create(-1, 0) // up
             };
 
             // Queue for BFS
