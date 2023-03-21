@@ -86,6 +86,7 @@ namespace lab_altha
                 if (map[current.Item1, current.Item2] == 'T' && count < countT - 1)
                 {
                     count++;
+                    map[current.Item1, current.Item2] = 'R';
                     List<Tuple<int, int>> path = new List<Tuple<int, int>>();
                     pathqueue.Clear();
                     tempCurrent = current;
@@ -116,7 +117,7 @@ namespace lab_altha
                     current = tempCurrent;
                     tempCurrent2 = current;
                     pathParent.Clear();
-                    pathParent = new Dictionary<Tuple<int, int>, Tuple<int, int>>(tempPathParent);
+                    pathParent = new Dictionary<Tuple<int, int>, Tuple<int, int>>();
                 }
                 else if (map[current.Item1, current.Item2] == 'T' && count == countT - 1)
                 {
@@ -160,10 +161,6 @@ namespace lab_altha
 
                     if (isPointValid(map, neighbor) && !pathParent.ContainsKey(neighbor))
                     {
-                        nodesCount++;
-                        pathqueue.Enqueue(neighbor);
-                        pathParent[neighbor] = current;
-                    } else if (isPointValid(map, neighbor) && current != start && current == tempCurrent) {
                         nodesCount++;
                         pathqueue.Enqueue(neighbor);
                         pathParent[neighbor] = current;
