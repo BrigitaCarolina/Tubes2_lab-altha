@@ -96,7 +96,8 @@ namespace lab_altha
                 Console.WriteLine();
                 Console.WriteLine("Steps: " + steps2);
                 Console.WriteLine("Nodes: " + nodes2);
-                Console.WriteLine("Execution Time: " + seconds2);
+                long secondsAnswer = seconds + seconds2; 
+                Console.WriteLine("Execution Time: " + secondsAnswer);
 
             }
 

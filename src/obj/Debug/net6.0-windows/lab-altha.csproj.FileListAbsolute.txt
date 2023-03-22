@@ -79,3 +79,8 @@ D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\bin\net6.0-windows\lab-altha.de
 D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\bin\net6.0-windows\lab-altha.runtimeconfig.json
 D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\bin\net6.0-windows\lab-altha.dll
 D:\00_STEI ITB\04_SMT4\STRATEGI ALGORITMA\TUBES2\bin\net6.0-windows\lab-altha.pdb
+C:\Users\gitac\Desktop\GIts\STIMA\TUBES#2STIMA\Tubes2_lab-altha\bin\net6.0-windows\lab-altha.exe
+C:\Users\gitac\Desktop\GIts\STIMA\TUBES#2STIMA\Tubes2_lab-altha\bin\net6.0-windows\lab-altha.deps.json
+C:\Users\gitac\Desktop\GIts\STIMA\TUBES#2STIMA\Tubes2_lab-altha\bin\net6.0-windows\lab-altha.runtimeconfig.json
+C:\Users\gitac\Desktop\GIts\STIMA\TUBES#2STIMA\Tubes2_lab-altha\bin\net6.0-windows\lab-altha.dll
+C:\Users\gitac\Desktop\GIts\STIMA\TUBES#2STIMA\Tubes2_lab-altha\bin\net6.0-windows\lab-altha.pdb

@@ -213,8 +213,7 @@ namespace lab_altha
             }
             int steps = BFSAnswer.bfsSteps + TSP.bfsSteps;
             int nodes = BFSAnswer.bfsNodes + TSP.bfsNodes;
-            long seconds = BFSAnswer.bfsSeconds + TSP.bfsSeconds;
-            return new bfs(solutions, solutionsInChar, steps, nodes, seconds);
+            return new bfs(solutions, solutionsInChar, steps, nodes, TSP.bfsSeconds);
         }
 
         static bool isPointValid(char[,] map, Tuple<int, int> point)
