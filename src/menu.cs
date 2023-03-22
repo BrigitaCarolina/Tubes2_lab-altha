@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Drawing;
 
 namespace lab_altha
 {
@@ -131,7 +132,8 @@ namespace lab_altha
                     //DFS without TSP
                     displayResult(solutionsDFS, solutionsInCharDFS, stepsDFS, nodesDFS, secondsDFS);
 
-                } else
+                }
+                else
                 {
                     //DFS with TSP
                     displayResult(solutionsDFS2, solutionsInCharDFS2, stepsDFS2, nodesDFS2, secondsDFS2);
@@ -142,18 +144,20 @@ namespace lab_altha
             {
                 MessageBox.Show("You haven't choose the algorithm");
             }
+
         }
 
         private void changeColor(int i, int j)
         {
 
-           
+
+            dataGridView1.Rows[i].Cells[j].Style.ForeColor = Color.Beige;
+            //Color DarkOliveGreen = Color.FromArgb(100, Color.DarkOliveGreen);
             dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.DarkOliveGreen;
-            dataGridView1.Rows[i].Cells[j].Style.ForeColor = Color.White;
-            
+
         }
 
-        private void displayResult(List<Tuple<int, int>> solutions, List<char> solutionsInChar, int steps, int nodes, long seconds)
+        private async void displayResult(List<Tuple<int, int>> solutions, List<char> solutionsInChar, int steps, int nodes, long seconds)
         {
             string result = string.Join("-", solutionsInChar);
             label9.Text = result;
@@ -172,13 +176,14 @@ namespace lab_altha
                     {
                         if (i == a && j == b)
                         {
-                           
+
                             changeColor(i, j);
-                            
+                            await Task.Delay(500);
+
                         }
 
                     }
- 
+
                 }
 
             }
@@ -187,6 +192,6 @@ namespace lab_altha
 
 
 
-        
+
     }
 }
