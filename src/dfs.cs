@@ -50,9 +50,9 @@ namespace lab_altha
             // create path
             List<Tuple<int, int>> path = new List<Tuple<int, int>>();
 
-            // BFS movement priority = L,R,U,D
-            int[] rowMovement = { 0, 0, -1, 1 };
-            int[] colMovement = { -1, 1, 0, 0 };
+            // BFS movement priority = R,D,L,U
+            int[] rowMovement = { 0, 1, 0, -1 };
+            int[] colMovement = { 1, 0, -1, 0 };
 
             int nRow = 0, nCol = 0;
             bool isValid;
@@ -109,31 +109,42 @@ namespace lab_altha
             path.Add(currPoint);
             time.Stop();
             List<char> pathDirection = IndexToChar(path);
-            return new dfs(path, pathDirection, path.Count(), nNodes, time.ElapsedMilliseconds);
+            return new dfs(path, pathDirection, pathDirection.Count(), nNodes, time.ElapsedMilliseconds);
         }
 
         public static dfs TSPwithDFS(char[,] map, Tuple<int, int> lastTreasure)
         {
+            var time = new System.Diagnostics.Stopwatch();
+            time.Start();
+            dfs result = dfs.DFS(map); 
             int maxRow = map.GetLength(0);
             int maxCol = map.GetLength(1);
+            char[,] mapCopy = new char[maxRow, maxCol];
+            Array.Copy(map, mapCopy, map.Length);
             for (int i = 0; i < maxRow; i++)
             {
                 for (int j = 0; j < maxCol; j++)
                 {
-                    if (map[i, j] == 'T')
+                    if (mapCopy[i, j] == 'T')
                     {
-                        map[i, j] = 'R';
+                        mapCopy[i, j] = 'R';
                     }
-                    if (map[i, j] == 'K')
+                    if (mapCopy[i, j] == 'K')
                     {
-                        map[i, j] = 'T';
+                        mapCopy[i, j] = 'T';
                     }
 
                 }
             }
-            map[lastTreasure.Item1, lastTreasure.Item2] = 'K';
-            dfs result = dfs.DFS(map); 
-            return new dfs(result.dfsPath,result.dfsDirection,result.dfsSteps,result.dfsNodes,result.dfsSeconds);
+            mapCopy[lastTreasure.Item1, lastTreasure.Item2] = 'K';
+            dfs tsp = dfs.DFS(mapCopy);
+            time.Stop();
+
+            // merge dfs and tsp
+            int nodes = result.dfsNodes + tsp.dfsNodes;
+            int steps = result.dfsSteps + tsp.dfsSteps;
+            tsp.dfsPath.RemoveAt(0);
+            return new dfs((result.dfsPath).Concat(tsp.dfsPath).ToList(),(result.dfsDirection).Concat(tsp.dfsDirection).ToList(),steps,nodes,time.ElapsedMilliseconds);
         }
 
         private static bool IsPointValid(char point)
@@ -190,7 +201,7 @@ namespace lab_altha
         {
             for (int i = 0; i < points.Count; i++)
             {
-                Console.WriteLine(points[i].Item1.ToString() + "," + points[i].Item2.ToString());
+                Console.Write(points[i].Item1.ToString() + "," + points[i].Item2.ToString() + " -> ");
             }
             Console.WriteLine();
         }

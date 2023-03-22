@@ -130,12 +130,22 @@ namespace lab_altha
             Console.WriteLine("Nodes: " + result.dfsNodes);
             Console.WriteLine("Execution time: " + result.dfsSeconds + " ms");
 
+
             dfs tsp = dfs.TSPwithDFS(map, result.dfsPath[result.dfsPath.Count()-1]);
-            Console.WriteLine("TSP : ");
-            foreach(var item in tsp.dfsPath)
+             Console.WriteLine("DFS with tsp Solution: ");
+            dfs.PrintPoints(tsp.dfsPath);
+            Console.WriteLine();
+            Console.WriteLine("direction: ");
+            foreach (var item in tsp.dfsDirection)
             {
-                Console.WriteLine(item);
+                Console.Write(item + ", ");
             }
+            Console.WriteLine();
+            Console.WriteLine("Steps: " + tsp.dfsSteps);
+            Console.WriteLine("Nodes: " + tsp.dfsNodes);
+            Console.WriteLine("Execution time: " + tsp.dfsSeconds + " ms");
+
+
 
         }
     }
