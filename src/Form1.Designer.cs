@@ -50,7 +50,7 @@
             button1.Font = new Font("Perpetua Titling MT", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.SeaShell;
             button1.Image = Properties.Resources.Rectangle_2;
-            button1.Location = new Point(762, 465);
+            button1.Location = new Point(739, 465);
             button1.Name = "button1";
             button1.Size = new Size(150, 41);
             button1.TabIndex = 0;
@@ -74,10 +74,10 @@
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox1.ForeColor = Color.DarkOliveGreen;
-            textBox1.Location = new Point(403, 469);
+            textBox1.Location = new Point(346, 466);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(338, 40);
+            textBox1.Size = new Size(384, 40);
             textBox1.TabIndex = 3;
             // 
             // label2
@@ -130,7 +130,7 @@
             buttonVisualize.Font = new Font("Perpetua Titling MT", 12F, FontStyle.Bold, GraphicsUnit.Point);
             buttonVisualize.ForeColor = Color.SeaShell;
             buttonVisualize.Image = Properties.Resources.Rectangle_2;
-            buttonVisualize.Location = new Point(601, 581);
+            buttonVisualize.Location = new Point(550, 601);
             buttonVisualize.Name = "buttonVisualize";
             buttonVisualize.Size = new Size(150, 41);
             buttonVisualize.TabIndex = 8;

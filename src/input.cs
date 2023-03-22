@@ -39,7 +39,7 @@ namespace lab_altha
         public static char[,] toMatrix(string fileName)
         {
             string dir = Directory.GetCurrentDirectory();
-            string proj = "src";
+            string proj = "bin";
             string dirFix = dir.Substring(0, dir.IndexOf(proj) - 1);
             string textFile = dirFix + @"\test\" + fileName;
             string[] lines = File.ReadAllLines(textFile);
@@ -68,7 +68,7 @@ namespace lab_altha
             {
                 for(int j = 0; j < col; j++)
                 {
-                    fixMatrix[i, j] = char.Parse(readMat[4 * i + j]);
+                    fixMatrix[i, j] = char.Parse(readMat[(col * i) + j]);
                 }
             }
             return fixMatrix;
