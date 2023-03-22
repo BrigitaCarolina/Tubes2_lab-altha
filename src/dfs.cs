@@ -13,20 +13,22 @@ namespace lab_altha
         public int dfsSteps;
         public int dfsNodes;
         public long dfsSeconds;
-        public dfs() {
+        public dfs()
+        {
             dfsPath = new List<Tuple<int, int>>();
             dfsDirection = new List<char>();
             dfsSteps = 0;
             dfsNodes = 0;
             dfsSeconds = 0;
         }
-        public dfs(List<Tuple<int, int>> path, List<char> direction, int steps, int nodes, long second) {
+        public dfs(List<Tuple<int, int>> path, List<char> direction, int steps, int nodes, long second)
+        {
             dfsPath = path;
             dfsDirection = direction;
             dfsSteps = steps;
             dfsNodes = nodes;
             dfsSeconds = second;
-        } 
+        }
 
         public static dfs DFS(char[,] map)
         {
@@ -87,10 +89,16 @@ namespace lab_altha
                 {
                     treasureCount--;
                 }
+                visited[currPoint.Item1, currPoint.Item2] = true;
+                while (visited[s.Peek().Item1.Item1, s.Peek().Item1.Item2])
+                {
+                    currPoint = s.Pop().Item1;
+                }
 
                 // backtrack path's handle
                 if (path.Last() != s.Peek().Item2)
                 {
+                    Console.WriteLine("backtrack");
                     int idx = path.Count() - 2;
                     Tuple<int, int> search;
                     while (path.Last() != s.Peek().Item2)
@@ -102,8 +110,11 @@ namespace lab_altha
                     }
                 }
 
-                visited[currPoint.Item1, currPoint.Item2] = true;
                 currPoint = s.Pop().Item1;
+                while (visited[currPoint.Item1, currPoint.Item2])
+                {
+                    currPoint = s.Pop().Item1;
+                }
 
             }
             path.Add(currPoint);
@@ -116,7 +127,7 @@ namespace lab_altha
         {
             var time = new System.Diagnostics.Stopwatch();
             time.Start();
-            dfs result = dfs.DFS(map); 
+            dfs result = dfs.DFS(map);
             int maxRow = map.GetLength(0);
             int maxCol = map.GetLength(1);
             char[,] mapCopy = new char[maxRow, maxCol];
@@ -144,7 +155,7 @@ namespace lab_altha
             int nodes = result.dfsNodes + tsp.dfsNodes;
             int steps = result.dfsSteps + tsp.dfsSteps;
             tsp.dfsPath.RemoveAt(0);
-            return new dfs((result.dfsPath).Concat(tsp.dfsPath).ToList(),(result.dfsDirection).Concat(tsp.dfsDirection).ToList(),steps,nodes,time.ElapsedMilliseconds);
+            return new dfs((result.dfsPath).Concat(tsp.dfsPath).ToList(), (result.dfsDirection).Concat(tsp.dfsDirection).ToList(), steps, nodes, time.ElapsedMilliseconds);
         }
 
         private static bool IsPointValid(char point)
@@ -230,5 +241,6 @@ namespace lab_altha
             }
             return solutionInChar;
         }
+
     }
 }
