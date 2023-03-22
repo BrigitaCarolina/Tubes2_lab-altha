@@ -125,8 +125,6 @@ namespace lab_altha
 
         public static dfs TSPwithDFS(char[,] map, Tuple<int, int> lastTreasure)
         {
-            var time = new System.Diagnostics.Stopwatch();
-            time.Start();
             dfs result = dfs.DFS(map);
             int maxRow = map.GetLength(0);
             int maxCol = map.GetLength(1);
@@ -149,13 +147,12 @@ namespace lab_altha
             }
             mapCopy[lastTreasure.Item1, lastTreasure.Item2] = 'K';
             dfs tsp = dfs.DFS(mapCopy);
-            time.Stop();
 
             // merge dfs and tsp
             int nodes = result.dfsNodes + tsp.dfsNodes;
             int steps = result.dfsSteps + tsp.dfsSteps;
             tsp.dfsPath.RemoveAt(0);
-            return new dfs((result.dfsPath).Concat(tsp.dfsPath).ToList(), (result.dfsDirection).Concat(tsp.dfsDirection).ToList(), steps, nodes, time.ElapsedMilliseconds);
+            return new dfs((result.dfsPath).Concat(tsp.dfsPath).ToList(), (result.dfsDirection).Concat(tsp.dfsDirection).ToList(), steps, nodes, tsp.dfsSeconds);
         }
 
         private static bool IsPointValid(char point)

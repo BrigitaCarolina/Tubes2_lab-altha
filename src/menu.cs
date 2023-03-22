@@ -120,8 +120,8 @@ namespace lab_altha
                 else
                 {
                     //BSF with TSP
-                    long secondsTSP = secondsBFS + seconds2;
-                    displayResult(solutions2, solutionsInChar2, steps2, nodes2, secondsTSP);
+                    long secondsTSPBFS = secondsBFS + seconds2;
+                    displayResult(solutions2, solutionsInChar2, steps2, nodes2, secondsTSPBFS);
 
                 }
 
@@ -137,7 +137,8 @@ namespace lab_altha
                 else
                 {
                     //DFS with TSP
-                    displayResult(solutionsDFS2, solutionsInCharDFS2, stepsDFS2, nodesDFS2, secondsDFS2);
+                    long secondsTSPDSF = secondsDFS + secondsDFS2;
+                    displayResult(solutionsDFS2, solutionsInCharDFS2, stepsDFS2, nodesDFS2, secondsTSPDSF);
                 }
 
             }

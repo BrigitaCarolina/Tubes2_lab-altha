@@ -111,13 +111,13 @@ namespace lab_altha
             Console.WriteLine();
 
             Console.WriteLine("BFSS");
-            /*char[,] map = { {'X','X','T','X','X','T'},
+            char[,] map = { {'X','X','T','X','X','T'},
                              {'X','X','R','X','X','R'},
                              {'K','R','R','R','R','R'},
                              {'X','R','X','X','R','X'},
                              {'X','T','X','X','R','X' } };
-            */
-            char[,] map = { {'K','R','R','T','R'}};
+            
+            
             dfs result = dfs.DFS(map);
             Console.WriteLine("DFS Solution: ");
             dfs.PrintPoints(result.dfsPath);
