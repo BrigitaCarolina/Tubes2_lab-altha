@@ -24,7 +24,7 @@ namespace lab_altha
             {
                 string proj = "src";
                 string dirFix = dir.Substring(0, dir.IndexOf(proj) - 1);
-
+                Console.WriteLine(dirFix);
 
                 string fileName = textBox1.Text;
                 //string textFile = dirFix + @"\tc\" + fileName;
