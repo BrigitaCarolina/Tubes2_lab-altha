@@ -120,7 +120,8 @@ namespace lab_altha
                 else
                 {
                     //BSF with TSP
-                    displayResult(solutions2, solutionsInChar2, steps2, nodes2, seconds2);
+                    long secondsTSP = secondsBFS + seconds2;
+                    displayResult(solutions2, solutionsInChar2, steps2, nodes2, secondsTSP);
 
                 }
 
