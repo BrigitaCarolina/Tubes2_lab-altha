@@ -19,10 +19,10 @@ namespace lab_altha
         private void button1_Click(object sender, EventArgs e)
         {
             string dir = Directory.GetCurrentDirectory();
-            //label2.Text = dir;
+            label2.Text = dir;
             try
             {
-                string proj = "bin";
+                string proj = "src";
                 string dirFix = dir.Substring(0, dir.IndexOf(proj) - 1);
 
 

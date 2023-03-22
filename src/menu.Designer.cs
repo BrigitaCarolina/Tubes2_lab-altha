@@ -183,6 +183,7 @@ namespace lab_altha
             label3.Name = "label3";
             label3.Size = new Size(0, 19);
             label3.TabIndex = 14;
+            
             // 
             // checkBox1
             // 
