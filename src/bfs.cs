@@ -16,7 +16,8 @@ namespace lab_altha
         public int bfsSteps;
         public int bfsNodes;
         public long bfsSeconds;
-        public bfs() {
+        public bfs()
+        {
             bfsPath = new List<Tuple<int, int>>();
             bfsDirection = new List<char>();
             bfsSteps = 0;
@@ -24,13 +25,14 @@ namespace lab_altha
             bfsSeconds = 0;
         }
 
-        public bfs(List<Tuple<int, int>> path, List<char> direction, int steps, int nodes, long second) {
+        public bfs(List<Tuple<int, int>> path, List<char> direction, int steps, int nodes, long second)
+        {
             bfsPath = path;
             bfsDirection = direction;
             bfsSteps = steps;
             bfsNodes = nodes;
             bfsSeconds = second;
-        } 
+        }
 
         // BFS Algorithm
         public static bfs BFS(char[,] map)
@@ -159,7 +161,7 @@ namespace lab_altha
                     );
 
                     if (isPointValid(map, neighbor) && !pathParent.ContainsKey(neighbor))
-                    { 
+                    {
                         pathqueue.Enqueue(neighbor);
                         pathParent[neighbor] = current;
                     }
@@ -170,7 +172,8 @@ namespace lab_altha
             return new bfs(allPath, IndexToChar(allPath), steps, nodesCount, second);
         }
 
-        public static bfs TSPWithBFS(char[,] map, Tuple<int, int> lastTreasure) {
+        public static bfs TSPWithBFS(char[,] map, Tuple<int, int> lastTreasure)
+        {
             bfs BFSAnswer = bfs.BFS(map);
             int maxRow = map.GetLength(0);
             int maxCol = map.GetLength(1);
@@ -193,18 +196,22 @@ namespace lab_altha
             }
             mapinside[lastTreasure.Item1, lastTreasure.Item2] = 'K';
             bfs TSP = bfs.BFS(mapinside);
-            List<Tuple<int, int>> solutions = new List<Tuple<int, int>>(); 
-            for (int i = 0; i < BFSAnswer.bfsPath.Count; i++) {
+            List<Tuple<int, int>> solutions = new List<Tuple<int, int>>();
+            for (int i = 0; i < BFSAnswer.bfsPath.Count; i++)
+            {
                 solutions.Add(BFSAnswer.bfsPath[i]);
             }
-            for (int i = 1; i < TSP.bfsPath.Count; i++) {
+            for (int i = 1; i < TSP.bfsPath.Count; i++)
+            {
                 solutions.Add(TSP.bfsPath[i]);
             }
             List<char> solutionsInChar = new List<char>();
-            for (int i = 0; i < BFSAnswer.bfsDirection.Count; i++) {
+            for (int i = 0; i < BFSAnswer.bfsDirection.Count; i++)
+            {
                 solutionsInChar.Add(BFSAnswer.bfsDirection[i]);
             }
-            for (int i = 0; i < TSP.bfsDirection.Count; i++) {
+            for (int i = 0; i < TSP.bfsDirection.Count; i++)
+            {
                 solutionsInChar.Add(TSP.bfsDirection[i]);
             }
             int steps = BFSAnswer.bfsSteps + TSP.bfsSteps;

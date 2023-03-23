@@ -40,6 +40,15 @@ namespace lab_altha
             dataGridView1.Rows[0].Selected = false;
             dataGridView1.GridColor = Color.Beige;
 
+            if (getRow > 15)
+            {
+                dataGridView1.Font = new Font("Perpetua Titling MT", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            }
+            else
+            {
+                dataGridView1.Font = new Font("Perpetua Titling MT", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            }
+
 
             for (int i = 0; i < getRow; i++)
             {
@@ -84,6 +93,7 @@ namespace lab_altha
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
             this.Hide();
             var mainmenu = new Form1();
             mainmenu.FormClosed += (s, args) => this.Close();
@@ -184,6 +194,7 @@ namespace lab_altha
         private async void displayResult(List<Tuple<int, int>> solutions, List<char> solutionsInChar, int steps, int nodes, long seconds)
         {
             button3.Enabled = false;
+            button2.Enabled = false;
             button1.Enabled = false;
             string result = string.Join("", solutionsInChar);
             //label9.Text = result;
@@ -269,6 +280,8 @@ namespace lab_altha
                                 visited[i, j] = 0;
                             }
 
+                           
+
                         }
 
                     }
@@ -278,6 +291,7 @@ namespace lab_altha
             MessageBox.Show("Finished!", "Important Message");
             await Task.Delay(200);
             button3.Enabled = true;
+            button2.Enabled = true;
             button1.Enabled = true;
 
         }

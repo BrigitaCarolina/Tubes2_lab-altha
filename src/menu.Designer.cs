@@ -226,6 +226,7 @@ namespace lab_altha
             label4.Name = "label4";
             label4.Size = new Size(0, 19);
             label4.TabIndex = 17;
+            label4.Text = InputFile.fileName;
             // 
             // label5
             // 
@@ -419,19 +420,21 @@ namespace lab_altha
             // 
             // textBox1
             // 
-            textBox1.BackColor = Color.AntiqueWhite;
+            textBox1.BackColor = Color.SeaShell;
             textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Enabled = false;
             textBox1.Font = new Font("Perpetua Titling MT", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox1.ForeColor = Color.Sienna;
-            textBox1.Location = new Point(526, 575);
+            textBox1.Location = new Point(526, 560);
+            textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
-            textBox1.RightToLeft = RightToLeft.No;
+            textBox1.RightToLeft = RightToLeft.Yes;
             textBox1.ScrollBars = ScrollBars.Horizontal;
-            textBox1.Size = new Size(382, 19);
+            textBox1.Size = new Size(382, 42);
             textBox1.TabIndex = 32;
+            textBox1.TextAlign = HorizontalAlignment.Right;
             textBox1.UseWaitCursor = true;
+            textBox1.WordWrap = false;
             // 
             // menu
             // 
