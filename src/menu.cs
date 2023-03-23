@@ -24,10 +24,12 @@ namespace lab_altha
         public menu()
         {
             InitializeComponent();
+            button3.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             char[,] temp = InputFile.toMatrix(label4.Text);
             //Get Row
             getRow = temp.GetLength(0);
@@ -38,6 +40,7 @@ namespace lab_altha
             dataGridView1.Rows[0].Selected = false;
             dataGridView1.GridColor = Color.Beige;
 
+
             for (int i = 0; i < getRow; i++)
             {
 
@@ -47,19 +50,27 @@ namespace lab_altha
                     if (temp[i, j] == 'X')
 
                     {
+
+
                         dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.Wheat;
                     }
                     else if (temp[i, j] == 'R')
                     {
+                        dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        dataGridView1.Rows[i].Cells[j].Style.ForeColor = Color.SaddleBrown;
                         dataGridView1.Rows[i].Cells[j].Value = "J";
 
                     }
                     else if (temp[i, j] == 'K')
                     {
+                        dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        dataGridView1.Rows[i].Cells[j].Style.ForeColor = Color.SaddleBrown;
                         dataGridView1.Rows[i].Cells[j].Value = "K";
                     }
                     else if (temp[i, j] == 'T')
                     {
+                        dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        dataGridView1.Rows[i].Cells[j].Style.ForeColor = Color.Gold;
                         dataGridView1.Rows[i].Cells[j].Value = "T";
 
                     }
@@ -68,6 +79,7 @@ namespace lab_altha
                 dataGridView1.Rows[i].Height = (400 / getRow);
 
             }
+            button3.Enabled = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -88,7 +100,7 @@ namespace lab_altha
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private async void button3_Click(object sender, EventArgs e)
         {
 
             char[,] temp = InputFile.toMatrix(label4.Text);
@@ -115,11 +127,15 @@ namespace lab_altha
                 if (!checkBox3.Checked)
                 {
                     //BFS without TSP
+                    resetdisplay();
+                    await Task.Delay(300);
                     displayResult(solutionsBFS, solutionsInCharBFS, stepsBFS, nodesBFS, secondsBFS);
                 }
                 else
                 {
                     //BSF with TSP
+                    resetdisplay();
+                    await Task.Delay(300);
                     long secondsTSP = secondsBFS + seconds2;
                     displayResult(solutions2, solutionsInChar2, steps2, nodes2, secondsTSP);
 
@@ -131,12 +147,16 @@ namespace lab_altha
                 if (!checkBox3.Checked)
                 {
                     //DFS without TSP
+                    resetdisplay();
+                    await Task.Delay(300);                    
                     displayResult(solutionsDFS, solutionsInCharDFS, stepsDFS, nodesDFS, secondsDFS);
 
                 }
                 else
                 {
                     //DFS with TSP
+                    resetdisplay();
+                    await Task.Delay(300);
                     displayResult(solutionsDFS2, solutionsInCharDFS2, stepsDFS2, nodesDFS2, secondsDFS2);
                 }
 
@@ -148,23 +168,62 @@ namespace lab_altha
 
         }
 
-        private void changeColor(int i, int j)
+        private void changeColor(int i, int j, int k)
         {
+            Color[] listColor = new Color[6] {Color.DarkSeaGreen, Color.MediumSeaGreen, Color.ForestGreen, Color.OliveDrab, Color.DarkOliveGreen, Color.DarkGreen };
 
 
-            dataGridView1.Rows[i].Cells[j].Style.ForeColor = Color.Beige;
+
+            dataGridView1.Rows[i].Cells[j].Style.ForeColor = Color.Maroon;
             //Color DarkOliveGreen = Color.FromArgb(100, Color.DarkOliveGreen);
-            dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.DarkOliveGreen;
+            dataGridView1.Rows[i].Cells[j].Style.BackColor = listColor[k];
 
         }
 
+        
         private async void displayResult(List<Tuple<int, int>> solutions, List<char> solutionsInChar, int steps, int nodes, long seconds)
         {
+            button3.Enabled = false;
             string result = string.Join("-", solutionsInChar);
+            label9.Text = result;
+            int len = result.Length;
+            
+             if(result.Length > 45)
+            {
+                string a = result.Substring(0, 35);
+                string b = result.Substring(35);
+                label9.Text = a;
+                label13.Text = b;
+            }  else
+            {
+                label9.Text = result;
+            }
             label9.Text = result;
             label10.Text = nodes.ToString();
             label11.Text = steps.ToString();
             label12.Text = seconds.ToString() + " ms";
+
+            int[,] visited = new int[getRow, getCol];
+
+            for (int i = 0; i < getRow; i++)
+            {
+                for (int j = 0; j < getCol; j++)
+                {
+                    visited[i, j] = 0;
+                }
+            }
+
+            char[,] getTreasure = new char[getRow,getCol];
+            for (int i = 0; i < getRow; i++)
+            {
+                for (int j = 0; j < getCol; j++)
+                {
+                    getTreasure[i, j] = '0';
+                }
+            }
+
+            int carry = 1;
+
 
             for (int k = 0; k < solutions.Count(); k++)
             {
@@ -178,21 +237,77 @@ namespace lab_altha
                         if (i == a && j == b)
                         {
 
-                            changeColor(i, j);
-                            await Task.Delay(500);
+                            
+                            if (visited[i, j] >= 0 && visited[i, j] < 7)
+                            {
+                                changeColor(i, j, visited[i, j]);
+                                await Task.Delay(400);
+                                visited[i, j] += carry;
+                                if(dataGridView1.Rows[i].Cells[j].Value.ToString() == "T" && getTreasure[i,j] == '0'){
+                                    MessageBox.Show("Treasure Found!", "Important Message");
+                                    getTreasure[i,j] = '1';
+                                    //dataGridView1.Rows[i].Cells[j].Value = "R";
+                                }
+                            }
+                            else
+                            {
+                                changeColor(i, j, visited[i, j]);
+                                await Task.Delay(400);
+                                visited[i, j] = 0;
+                            }
 
                         }
+
+                    }
+                }
+
+            }
+            await Task.Delay(200);
+            button3.Enabled = true;
+
+        }
+
+        private async void resetdisplay()
+        {
+            for (int i = 0; i < getRow; i++)
+            {
+                for (int j = 0; j < getCol; j++)
+                {
+                    if (dataGridView1.Rows[i].Cells[j].Value == null)
+
+                    {
+                        dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.Wheat;
+                    }
+                    else if (dataGridView1.Rows[i].Cells[j].Value.ToString() == "J")
+                    {
+                        dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        dataGridView1.Rows[i].Cells[j].Style.ForeColor = Color.SaddleBrown;
+                        dataGridView1.Rows[i].Cells[j].Value = "J";
+
+                    }
+                    else if (dataGridView1.Rows[i].Cells[j].Value.ToString() == "K")
+                    {
+                        dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        dataGridView1.Rows[i].Cells[j].Style.ForeColor = Color.SaddleBrown;
+                        dataGridView1.Rows[i].Cells[j].Value = "K";
+                    }
+                    else if (dataGridView1.Rows[i].Cells[j].Value.ToString() == "T")
+                    {
+                        dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        dataGridView1.Rows[i].Cells[j].Style.ForeColor = Color.Gold;
+                        dataGridView1.Rows[i].Cells[j].Value = "T";
 
                     }
 
                 }
 
             }
-
+            await Task.Delay(100);
         }
 
 
-
-
     }
+
+
 }
+

@@ -19,7 +19,7 @@ namespace lab_altha
         private void button1_Click(object sender, EventArgs e)
         {
             string dir = Directory.GetCurrentDirectory();
-            label2.Text = dir;
+            //label2.Text = dir;
             try
             {
                 string proj = "src";
@@ -47,7 +47,7 @@ namespace lab_altha
                     List<String> readMat = new List<String>();
                     if (row == 0)
                     {
-                        MessageBox.Show("File is Empty :(", "Warning");
+                        MessageBox.Show("File is Empty :(", "Warning", MessageBoxButtons.OK);
                     }
                     else
                     {
@@ -91,24 +91,24 @@ namespace lab_altha
                         var countAll = countEach.Distinct();
                         if (countAll.Count() > 1)
                         {
-                            MessageBox.Show("There's a wrong format line ", "Warning");
+                            MessageBox.Show("There's a wrong format line ", "Warning", MessageBoxButtons.OK);
                             proceed = false;
 
                         }
                         else if (found + foundK + foundT != row * col)
                         {
                             proceed = false;
-                            MessageBox.Show("Please correct your formating to only K, R, X, T", "Warning");
+                            MessageBox.Show("Please correct your formating to only K, R, X, T", "Warning", MessageBoxButtons.OK);
                         }
                         else if (foundK == 0)
                         {
                             proceed = false;
-                            MessageBox.Show("There is no starting point in your file format", "Warning");
+                            MessageBox.Show("There is no starting point in your file format", "Warning", MessageBoxButtons.OK);
                         }
                         else if (foundK > 1)
                         {
                             proceed = false;
-                            MessageBox.Show("There is more than one starting point in your file format", "Warning");
+                            MessageBox.Show("There is more than one starting point in your file format", "Warning", MessageBoxButtons.OK);
                         }
                         else if (foundT == 0)
                         {

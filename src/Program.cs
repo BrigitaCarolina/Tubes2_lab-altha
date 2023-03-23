@@ -11,18 +11,20 @@ namespace lab_altha
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             Console.WriteLine("tes");
-            //ApplicationConfiguration.Initialize();
-            //Application.Run(new Form1());
+            ApplicationConfiguration.Initialize();
+            Application.Run(new Form1());
             Console.WriteLine("tes");
             // MAIN
             Console.WriteLine("This is Treasure Hunt Solver with BFS!");
 
-            char[,] matrix = {{'K', 'R', 'R', 'T', 'R', 'R'},
-                              {'X', 'X', 'R', 'X', 'R', 'X'},
-                              {'R', 'R', 'R', 'X', 'X', 'T'},
-                              {'x', 'X', 'R', 'R', 'R', 'R'},
-                              {'X', 'R', 'X', 'X', 'X', 'R'},
-                              {'T', 'R', 'R', 'R', 'R', 'R'}};
+            // char[,] matrix = {{'K', 'R', 'R', 'T', 'R', 'R'},
+            //                   {'X', 'X', 'R', 'X', 'R', 'X'},
+            //                   {'R', 'R', 'R', 'X', 'X', 'T'},
+            //                   {'x', 'X', 'R', 'R', 'R', 'R'},
+            //                   {'X', 'R', 'X', 'X', 'X', 'R'},
+            //                   {'T', 'R', 'R', 'R', 'R', 'R'}};
+
+            char[,] matrix = InputFile.toMatrix(InputFile.fileName);
 
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
@@ -117,7 +119,7 @@ namespace lab_altha
                              {'X','R','X','X','R','X'},
                              {'X','T','X','X','R','X' } };
             */
-            char[,] map = { {'K','R','R','T','R'}};
+            char[,] map = InputFile.toMatrix(InputFile.fileName);
             dfs result = dfs.DFS(map);
             Console.WriteLine("DFS Solution: ");
             dfs.PrintPoints(result.dfsPath);

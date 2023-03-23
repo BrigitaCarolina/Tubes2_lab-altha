@@ -58,6 +58,7 @@ namespace lab_altha
             checkBox3 = new CheckBox();
             button3 = new Button();
             timer1 = new System.Windows.Forms.Timer(components);
+            label13 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -183,7 +184,6 @@ namespace lab_altha
             label3.Name = "label3";
             label3.Size = new Size(0, 19);
             label3.TabIndex = 14;
-            
             // 
             // checkBox1
             // 
@@ -282,10 +282,11 @@ namespace lab_altha
             label9.Font = new Font("Perpetua Titling MT", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             label9.ForeColor = Color.Sienna;
             label9.Image = Properties.Resources.bg;
-            label9.Location = new Point(491, 555);
+            label9.Location = new Point(513, 557);
             label9.Name = "label9";
-            label9.Size = new Size(0, 15);
+            label9.Size = new Size(29, 15);
             label9.TabIndex = 22;
+            //label9.Text = "tes";
             // 
             // label10
             // 
@@ -330,7 +331,7 @@ namespace lab_altha
             dataGridView1.AllowUserToResizeColumns = false;
             dataGridView1.AllowUserToResizeRows = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.BackgroundColor = Color.Cornsilk;
+            dataGridView1.BackgroundColor = Color.LemonChiffon;
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeight = 4;
             dataGridView1.ColumnHeadersVisible = false;
@@ -396,6 +397,19 @@ namespace lab_altha
             // 
             timer1.Interval = 10000;
             // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.FlatStyle = FlatStyle.Flat;
+            label13.Font = new Font("Perpetua Titling MT", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label13.ForeColor = Color.Sienna;
+            label13.Image = Properties.Resources.bg;
+            label13.Location = new Point(514, 580);
+            label13.Name = "label13";
+            label13.Size = new Size(55, 15);
+            label13.TabIndex = 29;
+            //label13.Text = "label13";
+            // 
             // menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -403,6 +417,7 @@ namespace lab_altha
             BackColor = SystemColors.ButtonHighlight;
             BackgroundImage = Properties.Resources.MENU;
             ClientSize = new Size(1200, 700);
+            Controls.Add(label13);
             Controls.Add(button3);
             Controls.Add(checkBox3);
             Controls.Add(dataGridView1);
@@ -463,5 +478,6 @@ namespace lab_altha
         private CheckBox checkBox3;
         private Button button3;
         private System.Windows.Forms.Timer timer1;
+        private Label label13;
     }
 }
