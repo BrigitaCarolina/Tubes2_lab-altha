@@ -34,7 +34,6 @@ namespace lab_altha
         {
             int treasureCount = getTreasureCount(map);
             var time = new System.Diagnostics.Stopwatch();
-            int nNodes = 0;
 
             // map max row & max column
             int maxRow = map.GetLength(0);
@@ -79,7 +78,6 @@ namespace lab_altha
                     // if neighbor valid: add to stack
                     if (isValid && IsPointValid(map[nRow, nCol]))
                     {
-                        nNodes++;
                         s.Push(new Tuple<Tuple<int, int>, Tuple<int, int>>(new Tuple<int, int>(nRow, nCol), currPoint));
                     }
                 }
@@ -120,13 +118,11 @@ namespace lab_altha
             path.Add(currPoint);
             time.Stop();
             List<char> pathDirection = IndexToChar(path);
-            return new dfs(path, pathDirection, pathDirection.Count(), nNodes, time.ElapsedMilliseconds);
+            return new dfs(path, pathDirection, pathDirection.Count(), path.Count(), time.ElapsedMilliseconds);
         }
 
         public static dfs TSPwithDFS(char[,] map, Tuple<int, int> lastTreasure)
         {
-            var time = new System.Diagnostics.Stopwatch();
-            time.Start();
             dfs result = dfs.DFS(map);
             int maxRow = map.GetLength(0);
             int maxCol = map.GetLength(1);
@@ -149,13 +145,12 @@ namespace lab_altha
             }
             mapCopy[lastTreasure.Item1, lastTreasure.Item2] = 'K';
             dfs tsp = dfs.DFS(mapCopy);
-            time.Stop();
 
             // merge dfs and tsp
             int nodes = result.dfsNodes + tsp.dfsNodes;
             int steps = result.dfsSteps + tsp.dfsSteps;
             tsp.dfsPath.RemoveAt(0);
-            return new dfs((result.dfsPath).Concat(tsp.dfsPath).ToList(), (result.dfsDirection).Concat(tsp.dfsDirection).ToList(), steps, nodes, time.ElapsedMilliseconds);
+            return new dfs((result.dfsPath).Concat(tsp.dfsPath).ToList(), (result.dfsDirection).Concat(tsp.dfsDirection).ToList(), steps, nodes, tsp.dfsSeconds);
         }
 
         private static bool IsPointValid(char point)
