@@ -1,5 +1,5 @@
-# Tubes2_lab-altha
 ![Logo](./src/Resources/logo.svg)
+This task is done to fulfill Strategy and Algorythm IF2211
 
 # Introduction
 This application will help you find all the treasure with BFS and DFS algorithm! You can also use the TSP toggle to find your way back~~
