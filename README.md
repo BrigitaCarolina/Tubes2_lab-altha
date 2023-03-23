@@ -21,7 +21,8 @@ Make sure you have this
 3. Click lab-altha.sln
 4. Click the run button above or use `F5 or Fn + F5`
 
-| Author | NIM  | Nama |
+# Author
+| NIM  | Nama |
 | ------------- | ------------- |
 | 13521130 | Althaaf Khasyi Atisomya  |
 | 13521132  | Dhanika Novlisariyanti |
