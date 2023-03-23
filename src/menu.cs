@@ -29,7 +29,7 @@ namespace lab_altha
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             char[,] temp = InputFile.toMatrix(label4.Text);
             //Get Row
             getRow = temp.GetLength(0);
@@ -148,7 +148,7 @@ namespace lab_altha
                 {
                     //DFS without TSP
                     resetdisplay();
-                    await Task.Delay(300);                    
+                    await Task.Delay(300);
                     displayResult(solutionsDFS, solutionsInCharDFS, stepsDFS, nodesDFS, secondsDFS);
 
                 }
@@ -170,7 +170,7 @@ namespace lab_altha
 
         private void changeColor(int i, int j, int k)
         {
-            Color[] listColor = new Color[6] {Color.DarkSeaGreen, Color.MediumSeaGreen, Color.ForestGreen, Color.OliveDrab, Color.DarkOliveGreen, Color.DarkGreen };
+            Color[] listColor = new Color[6] { Color.DarkSeaGreen, Color.MediumSeaGreen, Color.ForestGreen, Color.OliveDrab, Color.DarkOliveGreen, Color.DarkGreen };
 
 
 
@@ -180,21 +180,31 @@ namespace lab_altha
 
         }
 
-        
+
         private async void displayResult(List<Tuple<int, int>> solutions, List<char> solutionsInChar, int steps, int nodes, long seconds)
         {
             button3.Enabled = false;
+            button1.Enabled = false;
             string result = string.Join("-", solutionsInChar);
             label9.Text = result;
             int len = result.Length;
-            
-             if(result.Length > 45)
+
+            if (result.Length > 50 && result.Length < 70)
             {
-                string a = result.Substring(0, 35);
-                string b = result.Substring(35);
+                string a = result.Substring(0, 30);
+                string b = result.Substring(31);
                 label9.Text = a;
                 label13.Text = b;
-            }  else
+            } else if (result.Length > 70 && result.Length < 100)
+            {
+                string a = result.Substring(0, 30);
+                string b = result.Substring(31, 60);
+                string c = result.Substring(61);
+                label9.Text = a;
+                label13.Text = b;
+                label14.Text = c;
+            }
+            else
             {
                 label9.Text = result;
             }
@@ -213,7 +223,7 @@ namespace lab_altha
                 }
             }
 
-            char[,] getTreasure = new char[getRow,getCol];
+            char[,] getTreasure = new char[getRow, getCol];
             for (int i = 0; i < getRow; i++)
             {
                 for (int j = 0; j < getCol; j++)
@@ -237,15 +247,16 @@ namespace lab_altha
                         if (i == a && j == b)
                         {
 
-                            
+
                             if (visited[i, j] >= 0 && visited[i, j] < 7)
                             {
                                 changeColor(i, j, visited[i, j]);
                                 await Task.Delay(400);
                                 visited[i, j] += carry;
-                                if(dataGridView1.Rows[i].Cells[j].Value.ToString() == "T" && getTreasure[i,j] == '0'){
+                                if (dataGridView1.Rows[i].Cells[j].Value.ToString() == "T" && getTreasure[i, j] == '0')
+                                {
                                     MessageBox.Show("Treasure Found!", "Important Message");
-                                    getTreasure[i,j] = '1';
+                                    getTreasure[i, j] = '1';
                                     //dataGridView1.Rows[i].Cells[j].Value = "R";
                                 }
                             }
@@ -264,6 +275,7 @@ namespace lab_altha
             }
             await Task.Delay(200);
             button3.Enabled = true;
+            button1.Enabled = true;
 
         }
 

@@ -22,7 +22,7 @@ namespace lab_altha
             //label2.Text = dir;
             try
             {
-                string proj = "src";
+                string proj = "bin";
                 string dirFix = dir.Substring(0, dir.IndexOf(proj) - 1);
                 Console.WriteLine(dirFix);
 
@@ -30,7 +30,7 @@ namespace lab_altha
                 //string textFile = dirFix + @"\tc\" + fileName;
                 string textFile = dirFix + @"\test\" + fileName;
                 //label2.Text = textFile;
-                
+
 
                 if (File.Exists(textFile))
                 {
@@ -133,7 +133,8 @@ namespace lab_altha
                 {
                     fileAuthenticated = true;
                 }
-            } catch (Exception t)
+            }
+            catch (Exception t)
             {
                 MessageBox.Show(t.ToString());
             }

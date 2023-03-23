@@ -31,9 +31,9 @@ namespace lab_altha
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menu));
             pictureBox1 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
@@ -57,8 +57,8 @@ namespace lab_altha
             dataGridView1 = new DataGridView();
             checkBox3 = new CheckBox();
             button3 = new Button();
-            timer1 = new System.Windows.Forms.Timer(components);
             label13 = new Label();
+            label14 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -284,9 +284,8 @@ namespace lab_altha
             label9.Image = Properties.Resources.bg;
             label9.Location = new Point(513, 557);
             label9.Name = "label9";
-            label9.Size = new Size(29, 15);
+            label9.Size = new Size(0, 15);
             label9.TabIndex = 22;
-            //label9.Text = "tes";
             // 
             // label10
             // 
@@ -393,10 +392,6 @@ namespace lab_altha
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
-            // timer1
-            // 
-            timer1.Interval = 10000;
-            // 
             // label13
             // 
             label13.AutoSize = true;
@@ -406,9 +401,23 @@ namespace lab_altha
             label13.Image = Properties.Resources.bg;
             label13.Location = new Point(514, 580);
             label13.Name = "label13";
-            label13.Size = new Size(55, 15);
+            label13.Size = new Size(29, 15);
             label13.TabIndex = 29;
-            //label13.Text = "label13";
+            //label13.Text = "tes";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.BackColor = Color.Transparent;
+            label14.FlatStyle = FlatStyle.Flat;
+            label14.Font = new Font("Perpetua Titling MT", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label14.ForeColor = Color.Sienna;
+            label14.Image = Properties.Resources.bg;
+            label14.Location = new Point(526, 602);
+            label14.Name = "label14";
+            label14.Size = new Size(56, 15);
+            label14.TabIndex = 30;
+            //label14.Text = "label14";
             // 
             // menu
             // 
@@ -417,6 +426,7 @@ namespace lab_altha
             BackColor = SystemColors.ButtonHighlight;
             BackgroundImage = Properties.Resources.MENU;
             ClientSize = new Size(1200, 700);
+            Controls.Add(label14);
             Controls.Add(label13);
             Controls.Add(button3);
             Controls.Add(checkBox3);
@@ -441,7 +451,12 @@ namespace lab_altha
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "menu";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Treasure Hunting";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -477,7 +492,7 @@ namespace lab_altha
         private DataGridView dataGridView1;
         private CheckBox checkBox3;
         private Button button3;
-        private System.Windows.Forms.Timer timer1;
         private Label label13;
+        private Label label14;
     }
 }

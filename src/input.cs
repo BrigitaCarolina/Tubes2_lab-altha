@@ -39,7 +39,7 @@ namespace lab_altha
         public static char[,] toMatrix(string fileName)
         {
             string dir = Directory.GetCurrentDirectory();
-            string proj = "src";
+            string proj = "bin";
             string dirFix = dir.Substring(0, dir.IndexOf(proj) - 1);
             string textFile = dirFix + @"\test\" + fileName;
             string[] lines = File.ReadAllLines(textFile);

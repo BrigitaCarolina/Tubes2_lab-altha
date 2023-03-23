@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             button1 = new Button();
             label1 = new Label();
             textBox1 = new TextBox();
@@ -140,8 +141,7 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.White;
             BackgroundImage = Properties.Resources.MENU;
             ClientSize = new Size(1200, 700);
@@ -153,7 +153,14 @@
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(readFile);
+            ForeColor = SystemColors.ControlLight;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Form1";
+            ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Treasure Hunting";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
