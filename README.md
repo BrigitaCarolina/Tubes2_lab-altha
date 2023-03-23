@@ -1,5 +1,5 @@
 # Tubes2_lab-altha
-![Logo](./src/Resources/logo lbaltha.png)
+![Logo](./src/Resources/logo.svg)
 
 # Introduction
 This application will help you find all the treasure with BFS and DFS algorithm! You can also use the TSP toggle to find your way back~~
@@ -13,7 +13,6 @@ Make sure you have this
 ```
 1. Visual Studio
 2. .NET SDK `ver 6` or above
-
 ```
 # How To Run
 1. Open Visual Studio
@@ -21,7 +20,7 @@ Make sure you have this
 3. Click lab-altha.sln
 4. Click the run button above or use `F5 or Fn + F5`
 
-# Author| NIM  | Nama |
+| Author | NIM  | Nama |
 | ------------- | ------------- |
 | 13521130 | Althaaf Khasyi Atisomya  |
 | 13521132  | Dhanika Novlisariyanti |
