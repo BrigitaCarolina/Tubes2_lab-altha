@@ -59,6 +59,7 @@ namespace lab_altha
             button3 = new Button();
             label13 = new Label();
             label14 = new Label();
+            textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -98,7 +99,7 @@ namespace lab_altha
             label2.Font = new Font("Perpetua Titling MT", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.Sienna;
             label2.Image = Properties.Resources.paper;
-            label2.Location = new Point(72, 229);
+            label2.Location = new Point(67, 238);
             label2.Name = "label2";
             label2.Size = new Size(137, 23);
             label2.TabIndex = 2;
@@ -225,7 +226,6 @@ namespace lab_altha
             label4.Name = "label4";
             label4.Size = new Size(0, 19);
             label4.TabIndex = 17;
-            label4.Text = InputFile.fileName;
             // 
             // label5
             // 
@@ -320,9 +320,8 @@ namespace lab_altha
             label12.Image = Properties.Resources.bg;
             label12.Location = new Point(67, 585);
             label12.Name = "label12";
-            label12.Size = new Size(33, 17);
+            label12.Size = new Size(0, 17);
             label12.TabIndex = 25;
-            //label12.Text = "tes";
             // 
             // dataGridView1
             // 
@@ -402,9 +401,8 @@ namespace lab_altha
             label13.Image = Properties.Resources.bgpanjang;
             label13.Location = new Point(514, 580);
             label13.Name = "label13";
-            label13.Size = new Size(29, 15);
+            label13.Size = new Size(0, 15);
             label13.TabIndex = 29;
-            //label13.Text = "tes";
             // 
             // label14
             // 
@@ -416,9 +414,24 @@ namespace lab_altha
             label14.Image = Properties.Resources.bgpanjang;
             label14.Location = new Point(526, 602);
             label14.Name = "label14";
-            label14.Size = new Size(29, 15);
+            label14.Size = new Size(0, 15);
             label14.TabIndex = 30;
-            //label14.Text = "tes";
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.AntiqueWhite;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Enabled = false;
+            textBox1.Font = new Font("Perpetua Titling MT", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.ForeColor = Color.Sienna;
+            textBox1.Location = new Point(526, 575);
+            textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.RightToLeft = RightToLeft.No;
+            textBox1.ScrollBars = ScrollBars.Horizontal;
+            textBox1.Size = new Size(382, 19);
+            textBox1.TabIndex = 32;
+            textBox1.UseWaitCursor = true;
             // 
             // menu
             // 
@@ -426,6 +439,7 @@ namespace lab_altha
             BackColor = SystemColors.ButtonHighlight;
             BackgroundImage = Properties.Resources.MENU;
             ClientSize = new Size(1200, 700);
+            Controls.Add(textBox1);
             Controls.Add(label14);
             Controls.Add(label13);
             Controls.Add(button3);
@@ -494,5 +508,6 @@ namespace lab_altha
         private Button button3;
         private Label label13;
         private Label label14;
+        private TextBox textBox1;
     }
 }

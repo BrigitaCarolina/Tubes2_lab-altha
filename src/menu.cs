@@ -64,7 +64,7 @@ namespace lab_altha
                     else if (temp[i, j] == 'K')
                     {
                         dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.White;
-                        dataGridView1.Rows[i].Cells[j].Style.ForeColor = Color.White;
+                        dataGridView1.Rows[i].Cells[j].Style.ForeColor = Color.Beige;
                         dataGridView1.Rows[i].Cells[j].Value = "K";
                     }
                     else if (temp[i, j] == 'T')
@@ -185,11 +185,12 @@ namespace lab_altha
         {
             button3.Enabled = false;
             button1.Enabled = false;
-            string result = string.Join("-", solutionsInChar);
-            label9.Text = result;
-            int len = result.Length;
+            string result = string.Join("", solutionsInChar);
+            //label9.Text = result;
+            textBox1.Text = result;
+            //int len = result.Length;
 
-            if (result.Length > 50 && result.Length < 70)
+            /*if (result.Length > 50 && result.Length < 70)
             {
                 string a = result.Substring(0, 30);
                 string b = result.Substring(31);
@@ -209,7 +210,7 @@ namespace lab_altha
             {
                 label9.Text = result;
             }
-            label9.Text = result;
+            label9.Text = result;*/
             label10.Text = nodes.ToString();
             label11.Text = steps.ToString();
             label12.Text = seconds.ToString() + " ms";
@@ -274,6 +275,7 @@ namespace lab_altha
                 }
 
             }
+            MessageBox.Show("Finished!", "Important Message");
             await Task.Delay(200);
             button3.Enabled = true;
             button1.Enabled = true;
@@ -301,7 +303,7 @@ namespace lab_altha
                     else if (dataGridView1.Rows[i].Cells[j].Value.ToString() == "K")
                     {
                         dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.White;
-                        dataGridView1.Rows[i].Cells[j].Style.ForeColor = Color.White;
+                        dataGridView1.Rows[i].Cells[j].Style.ForeColor = Color.Beige;
                         dataGridView1.Rows[i].Cells[j].Value = "K";
                     }
                     else if (dataGridView1.Rows[i].Cells[j].Value.ToString() == "T")
