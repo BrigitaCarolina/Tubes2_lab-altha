@@ -34,7 +34,6 @@ namespace lab_altha
         {
             int treasureCount = getTreasureCount(map);
             var time = new System.Diagnostics.Stopwatch();
-            int nNodes = 0;
 
             // map max row & max column
             int maxRow = map.GetLength(0);
@@ -79,7 +78,6 @@ namespace lab_altha
                     // if neighbor valid: add to stack
                     if (isValid && IsPointValid(map[nRow, nCol]))
                     {
-                        nNodes++;
                         s.Push(new Tuple<Tuple<int, int>, Tuple<int, int>>(new Tuple<int, int>(nRow, nCol), currPoint));
                     }
                 }
@@ -120,7 +118,7 @@ namespace lab_altha
             path.Add(currPoint);
             time.Stop();
             List<char> pathDirection = IndexToChar(path);
-            return new dfs(path, pathDirection, pathDirection.Count(), nNodes, time.ElapsedMilliseconds);
+            return new dfs(path, pathDirection, pathDirection.Count(), path.Count(), time.ElapsedMilliseconds);
         }
 
         public static dfs TSPwithDFS(char[,] map, Tuple<int, int> lastTreasure)
