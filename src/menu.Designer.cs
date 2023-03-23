@@ -281,7 +281,7 @@ namespace lab_altha
             label9.BackColor = Color.Transparent;
             label9.Font = new Font("Perpetua Titling MT", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             label9.ForeColor = Color.Sienna;
-            label9.Image = Properties.Resources.bg;
+            label9.Image = Properties.Resources.bgpanjang;
             label9.Location = new Point(513, 557);
             label9.Name = "label9";
             label9.Size = new Size(0, 15);
@@ -320,8 +320,9 @@ namespace lab_altha
             label12.Image = Properties.Resources.bg;
             label12.Location = new Point(67, 585);
             label12.Name = "label12";
-            label12.Size = new Size(0, 17);
+            label12.Size = new Size(33, 17);
             label12.TabIndex = 25;
+            //label12.Text = "tes";
             // 
             // dataGridView1
             // 
@@ -398,7 +399,7 @@ namespace lab_altha
             label13.FlatStyle = FlatStyle.Flat;
             label13.Font = new Font("Perpetua Titling MT", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             label13.ForeColor = Color.Sienna;
-            label13.Image = Properties.Resources.bg;
+            label13.Image = Properties.Resources.bgpanjang;
             label13.Location = new Point(514, 580);
             label13.Name = "label13";
             label13.Size = new Size(29, 15);
@@ -412,17 +413,16 @@ namespace lab_altha
             label14.FlatStyle = FlatStyle.Flat;
             label14.Font = new Font("Perpetua Titling MT", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             label14.ForeColor = Color.Sienna;
-            label14.Image = Properties.Resources.bg;
+            label14.Image = Properties.Resources.bgpanjang;
             label14.Location = new Point(526, 602);
             label14.Name = "label14";
-            label14.Size = new Size(56, 15);
+            label14.Size = new Size(29, 15);
             label14.TabIndex = 30;
-            //label14.Text = "label14";
+            //label14.Text = "tes";
             // 
             // menu
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackColor = SystemColors.ButtonHighlight;
             BackgroundImage = Properties.Resources.MENU;
             ClientSize = new Size(1200, 700);

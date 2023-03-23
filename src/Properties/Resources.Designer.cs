@@ -123,6 +123,16 @@ namespace lab_altha.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bgpanjang {
+            get {
+                object obj = ResourceManager.GetObject("bgpanjang", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap buttonBrown {
             get {
                 object obj = ResourceManager.GetObject("buttonBrown", resourceCulture);

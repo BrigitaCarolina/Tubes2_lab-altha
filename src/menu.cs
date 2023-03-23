@@ -57,14 +57,14 @@ namespace lab_altha
                     else if (temp[i, j] == 'R')
                     {
                         dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.White;
-                        dataGridView1.Rows[i].Cells[j].Style.ForeColor = Color.SaddleBrown;
+                        dataGridView1.Rows[i].Cells[j].Style.ForeColor = Color.White;
                         dataGridView1.Rows[i].Cells[j].Value = "J";
 
                     }
                     else if (temp[i, j] == 'K')
                     {
                         dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.White;
-                        dataGridView1.Rows[i].Cells[j].Style.ForeColor = Color.SaddleBrown;
+                        dataGridView1.Rows[i].Cells[j].Style.ForeColor = Color.White;
                         dataGridView1.Rows[i].Cells[j].Value = "K";
                     }
                     else if (temp[i, j] == 'T')
@@ -174,7 +174,7 @@ namespace lab_altha
 
 
 
-            dataGridView1.Rows[i].Cells[j].Style.ForeColor = Color.Maroon;
+            dataGridView1.Rows[i].Cells[j].Style.ForeColor = listColor[k];
             //Color DarkOliveGreen = Color.FromArgb(100, Color.DarkOliveGreen);
             dataGridView1.Rows[i].Cells[j].Style.BackColor = listColor[k];
 
@@ -195,7 +195,8 @@ namespace lab_altha
                 string b = result.Substring(31);
                 label9.Text = a;
                 label13.Text = b;
-            } else if (result.Length > 70 && result.Length < 100)
+            }
+            else if (result.Length > 70 && result.Length < 100)
             {
                 string a = result.Substring(0, 30);
                 string b = result.Substring(31, 60);
@@ -293,14 +294,14 @@ namespace lab_altha
                     else if (dataGridView1.Rows[i].Cells[j].Value.ToString() == "J")
                     {
                         dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.White;
-                        dataGridView1.Rows[i].Cells[j].Style.ForeColor = Color.SaddleBrown;
+                        dataGridView1.Rows[i].Cells[j].Style.ForeColor = Color.White;
                         dataGridView1.Rows[i].Cells[j].Value = "J";
 
                     }
                     else if (dataGridView1.Rows[i].Cells[j].Value.ToString() == "K")
                     {
                         dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.White;
-                        dataGridView1.Rows[i].Cells[j].Style.ForeColor = Color.SaddleBrown;
+                        dataGridView1.Rows[i].Cells[j].Style.ForeColor = Color.White;
                         dataGridView1.Rows[i].Cells[j].Value = "K";
                     }
                     else if (dataGridView1.Rows[i].Cells[j].Value.ToString() == "T")
