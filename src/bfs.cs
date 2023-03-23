@@ -79,10 +79,10 @@ namespace lab_altha
 
             Stopwatch s = new Stopwatch();
             s.Start();
-            Dictionary<Tuple<int, int>, Tuple<int, int>> tempPathParent = new Dictionary<Tuple<int, int>, Tuple<int, int>>();
             while (pathqueue.Count > 0)
             {
                 Tuple<int, int> current = pathqueue.Dequeue();
+                nodesCount++;
                 // Check if we've found the treasure 'T'
 
                 if (mapinsinde[current.Item1, current.Item2] == 'T' && count < countT - 1)
@@ -97,7 +97,6 @@ namespace lab_altha
                         while (current != null)
                         {
                             path.Add(current);
-                            tempPathParent[current] = pathParent[current];
                             current = pathParent[current];
                         }
                     }
@@ -106,10 +105,8 @@ namespace lab_altha
                         while (current != tempCurrent2)
                         {
                             path.Add(current);
-                            tempPathParent[current] = pathParent[current];
                             current = pathParent[current];
                         }
-                        tempPathParent[current] = pathParent[current];
                     }
                     path.Reverse();
                     foreach (Tuple<int, int> solution in path)
@@ -162,8 +159,7 @@ namespace lab_altha
                     );
 
                     if (isPointValid(map, neighbor) && !pathParent.ContainsKey(neighbor))
-                    {
-                        nodesCount++;
+                    { 
                         pathqueue.Enqueue(neighbor);
                         pathParent[neighbor] = current;
                     }
