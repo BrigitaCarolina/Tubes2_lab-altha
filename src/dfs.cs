@@ -150,7 +150,7 @@ namespace lab_altha
             int nodes = result.dfsNodes + tsp.dfsNodes;
             int steps = result.dfsSteps + tsp.dfsSteps;
             tsp.dfsPath.RemoveAt(0);
-            return new dfs((result.dfsPath).Concat(tsp.dfsPath).ToList(), (result.dfsDirection).Concat(tsp.dfsDirection).ToList(), steps, nodes, tsp.dfsSeconds);
+            return new dfs((result.dfsPath).Concat(tsp.dfsPath).ToList(), (result.dfsDirection).Concat(tsp.dfsDirection).ToList(), steps, nodes-1, tsp.dfsSeconds);
         }
 
         private static bool IsPointValid(char point)
