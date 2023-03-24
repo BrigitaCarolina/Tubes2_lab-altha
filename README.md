@@ -1,5 +1,4 @@
 # ![Logo](./src/Resources/logo.svg)
- lab-altha
 This task is done to fulfill Strategy and Algorythm IF2211
 
 # Table of Contents
