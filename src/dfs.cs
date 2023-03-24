@@ -82,15 +82,15 @@ namespace lab_altha
                     }
                 }
 
-                // treasure found
-                if (map[s.Peek().Item1.Item1, s.Peek().Item1.Item2] == 'T' && !visited[s.Peek().Item1.Item1, s.Peek().Item1.Item2])
-                {
-                    treasureCount--;
-                }
                 visited[currPoint.Item1, currPoint.Item2] = true;
                 while (visited[s.Peek().Item1.Item1, s.Peek().Item1.Item2])
                 {
                     currPoint = s.Pop().Item1;
+                }
+                // treasure found
+                if (map[s.Peek().Item1.Item1, s.Peek().Item1.Item2] == 'T' && !visited[s.Peek().Item1.Item1, s.Peek().Item1.Item2])
+                {
+                    treasureCount--;
                 }
 
                 // backtrack path's handle
