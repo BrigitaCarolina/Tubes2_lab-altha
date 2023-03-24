@@ -180,7 +180,7 @@ namespace lab_altha
 
         private void changeColor(int i, int j, int k)
         {
-            Color[] listColor = new Color[6] { Color.DarkSeaGreen, Color.MediumSeaGreen, Color.ForestGreen, Color.OliveDrab, Color.DarkOliveGreen, Color.DarkGreen };
+            Color[] listColor = new Color[8] { Color.DarkSeaGreen, Color.MediumSeaGreen, Color.ForestGreen, Color.OliveDrab, Color.DarkOliveGreen, Color.DarkGray, Color.DarkSlateGray,Color.DarkGreen};
 
 
 
@@ -261,7 +261,7 @@ namespace lab_altha
                         {
 
 
-                            if (visited[i, j] >= 0 && visited[i, j] < 7)
+                            if (visited[i, j] >= 0 && visited[i, j] < 9)
                             {
                                 changeColor(i, j, visited[i, j]);
                                 await Task.Delay(400);
@@ -275,9 +275,9 @@ namespace lab_altha
                             }
                             else
                             {
+                                visited[i, j] = 0;
                                 changeColor(i, j, visited[i, j]);
                                 await Task.Delay(400);
-                                visited[i, j] = 0;
                             }
 
                            

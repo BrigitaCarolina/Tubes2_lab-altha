@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\00_STEI ITB\\04_SMT4\\STRATEGI ALGORITMA\\clterakhir\\Tubes2_lab-altha\\src\\lab-altha.csproj",
+      "projectUniqueName": "D:\\00_STEI ITB\\04_SMT4\\STRATEGI ALGORITMA\\CLFIXTERAKHIR\\TERAKHIR\\src\\lab-altha.csproj",
       "projectName": "lab-altha",
-      "projectPath": "D:\\00_STEI ITB\\04_SMT4\\STRATEGI ALGORITMA\\clterakhir\\Tubes2_lab-altha\\src\\lab-altha.csproj",
+      "projectPath": "D:\\00_STEI ITB\\04_SMT4\\STRATEGI ALGORITMA\\CLFIXTERAKHIR\\TERAKHIR\\src\\lab-altha.csproj",
       "packagesPath": "C:\\Users\\dhani\\.nuget\\packages\\",
-      "outputPath": "D:\\00_STEI ITB\\04_SMT4\\STRATEGI ALGORITMA\\clterakhir\\Tubes2_lab-altha\\src\\obj\\",
+      "outputPath": "D:\\00_STEI ITB\\04_SMT4\\STRATEGI ALGORITMA\\CLFIXTERAKHIR\\TERAKHIR\\src\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dhani\\AppData\\Roaming\\NuGet\\NuGet.Config",
