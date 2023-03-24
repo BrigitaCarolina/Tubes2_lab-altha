@@ -1,11 +1,17 @@
-![Logo](./src/Resources/logo.svg)
-# lab-altha
+# ![Logo](./src/Resources/logo.svg)
+ lab-altha
 This task is done to fulfill Strategy and Algorythm IF2211
 
-# Introduction
+# Table of Contents
+* [Description](#markdown-header-description)
+* [Dependencies](#markdown-header-dependencies)
+* [How to Run](#markdown-header-how-to-run)
+* [Author](#markdown-header-author)
+
+# Description
 This application will help you find all the treasure with BFS and DFS algorithm! You can also use the TSP toggle to find your way back.
-Priorities
 ```
+Priorities:
 R - D - L - U
 ```
 ![Screen 1](./src/Resources/screen1.jpg)
@@ -17,8 +23,9 @@ R - D - L - U
 Make sure you have this
 ```
 1. Visual Studio
-2. .NET SDK `ver 6` or above
+2. .NET SDK `ver 6.0.0` or above
 ```
+
 # How To Run
 1. Open Visual Studio
 2. Clone this github
